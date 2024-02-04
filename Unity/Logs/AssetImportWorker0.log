@@ -5544,3 +5544,1346 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 465.651430 seconds.
+  path: Assets/Scripts/PlayerNetworking.cs
+  artifactKey: Guid(e88fed8a48fdf6b4fb417fbf9d6bee4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerNetworking.cs using Guid(e88fed8a48fdf6b4fb417fbf9d6bee4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adc2d9a11686d157fd7004bfb355dd62') in 0.010736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.979917 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> 5e0f6a4e7f8f46e4ec6f5ee4a6e01053 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> 5e0f6a4e7f8f46e4ec6f5ee4a6e01053 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '804ec261b26ff7470a9d9ef097456958') in 0.007954 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.402852 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> 5e0f6a4e7f8f46e4ec6f5ee4a6e01053 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> 5e0f6a4e7f8f46e4ec6f5ee4a6e01053 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '804ec261b26ff7470a9d9ef097456958') in 0.003160 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.4 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1938.
+Total: 2.046400 ms (FindLiveObjects: 0.094900 ms CreateObjectMapping: 0.034700 ms MarkObjects: 1.898700 ms  DeleteObjects: 0.017100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 10.944438 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> 5e0f6a4e7f8f46e4ec6f5ee4a6e01053 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> 5e0f6a4e7f8f46e4ec6f5ee4a6e01053 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '804ec261b26ff7470a9d9ef097456958') in 0.003280 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002431 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.747 seconds
+Domain Reload Profiling:
+	ReloadAssembly (748ms)
+		BeginReloadAssembly (82ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (619ms)
+			LoadAssemblies (69ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (211ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (249ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (53ms)
+				ProcessInitializeOnLoadAttributes (175ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1454 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1938.
+Total: 2.473200 ms (FindLiveObjects: 0.090200 ms CreateObjectMapping: 0.036400 ms MarkObjects: 2.321100 ms  DeleteObjects: 0.024300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 17.721115 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> 5e0f6a4e7f8f46e4ec6f5ee4a6e01053 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> 5e0f6a4e7f8f46e4ec6f5ee4a6e01053 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '804ec261b26ff7470a9d9ef097456958') in 0.005549 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002292 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.655 seconds
+Domain Reload Profiling:
+	ReloadAssembly (655ms)
+		BeginReloadAssembly (80ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (536ms)
+			LoadAssemblies (61ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (194ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (205ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (45ms)
+				ProcessInitializeOnLoadAttributes (143ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (1ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1454 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1938.
+Total: 1.743100 ms (FindLiveObjects: 0.080500 ms CreateObjectMapping: 0.029000 ms MarkObjects: 1.617500 ms  DeleteObjects: 0.015300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 277.750813 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> e8a6c88088f02307ad09263a588e8ddb 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> e8a6c88088f02307ad09263a588e8ddb 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '804ec261b26ff7470a9d9ef097456958') in 0.005014 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002248 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.652 seconds
+Domain Reload Profiling:
+	ReloadAssembly (652ms)
+		BeginReloadAssembly (72ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (534ms)
+			LoadAssemblies (60ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (191ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (209ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (44ms)
+				ProcessInitializeOnLoadAttributes (147ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (1ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1454 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1938.
+Total: 1.802100 ms (FindLiveObjects: 0.079000 ms CreateObjectMapping: 0.037800 ms MarkObjects: 1.668800 ms  DeleteObjects: 0.015700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 44.458183 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> e8a6c88088f02307ad09263a588e8ddb 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> e8a6c88088f02307ad09263a588e8ddb 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '804ec261b26ff7470a9d9ef097456958') in 0.004792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.322619 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> e8a6c88088f02307ad09263a588e8ddb 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player.prefab from editor
+Resuming Guid(c0138ad0c7cf1604a96bad3868ab7c04) Importer(-1,00000000000000000000000000000000) -> e8a6c88088f02307ad09263a588e8ddb 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '804ec261b26ff7470a9d9ef097456958') in 0.003705 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.763069 seconds.
+  path: Assets/Prefabs/Player (1).prefab
+  artifactKey: Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player (1).prefab using Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 1d0b6127fba2ece8fe2a8596f487c845 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 1d0b6127fba2ece8fe2a8596f487c845 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '653a34829a0a0e464d723059938b967e') in 0.006645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.167811 seconds.
+  path: Assets/Prefabs/Player (1).prefab
+  artifactKey: Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player (1).prefab using Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 1d0b6127fba2ece8fe2a8596f487c845 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 1d0b6127fba2ece8fe2a8596f487c845 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '653a34829a0a0e464d723059938b967e') in 0.003329 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.3 MB.
+System memory in use after: 59.4 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1938.
+Total: 2.068600 ms (FindLiveObjects: 0.079000 ms CreateObjectMapping: 0.029700 ms MarkObjects: 1.938900 ms  DeleteObjects: 0.019800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 9.171726 seconds.
+  path: Assets/Prefabs/Player (1).prefab
+  artifactKey: Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player (1).prefab using Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 1d0b6127fba2ece8fe2a8596f487c845 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 1d0b6127fba2ece8fe2a8596f487c845 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '653a34829a0a0e464d723059938b967e') in 0.003064 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002832 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.761 seconds
+Domain Reload Profiling:
+	ReloadAssembly (761ms)
+		BeginReloadAssembly (79ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (636ms)
+			LoadAssemblies (68ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (229ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (249ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (52ms)
+				ProcessInitializeOnLoadAttributes (175ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1454 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1938.
+Total: 2.072900 ms (FindLiveObjects: 0.099200 ms CreateObjectMapping: 0.036700 ms MarkObjects: 1.917400 ms  DeleteObjects: 0.017900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 10.059894 seconds.
+  path: Assets/Prefabs/Player (1).prefab
+  artifactKey: Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player (1).prefab using Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 1d0b6127fba2ece8fe2a8596f487c845 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 1d0b6127fba2ece8fe2a8596f487c845 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '653a34829a0a0e464d723059938b967e') in 0.005769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 35.002945 seconds.
+  path: Assets/Scripts/PlayerNetworking.cs
+  artifactKey: Guid(e88fed8a48fdf6b4fb417fbf9d6bee4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerNetworking.cs using Guid(e88fed8a48fdf6b4fb417fbf9d6bee4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bad150fee8a92a3975cf8a7de4c4156a') in 0.001356 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003492 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.643 seconds
+Domain Reload Profiling:
+	ReloadAssembly (643ms)
+		BeginReloadAssembly (73ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (530ms)
+			LoadAssemblies (58ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (189ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (207ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (45ms)
+				ProcessInitializeOnLoadAttributes (145ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (1ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1453 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.6 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1937.
+Total: 1.907100 ms (FindLiveObjects: 0.091300 ms CreateObjectMapping: 0.034400 ms MarkObjects: 1.764000 ms  DeleteObjects: 0.016400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 5.251554 seconds.
+  path: Assets/Prefabs/Player (1).prefab
+  artifactKey: Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player (1).prefab using Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 3ec8a556a069a685583b3a80c059b2f5 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 3ec8a556a069a685583b3a80c059b2f5 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '653a34829a0a0e464d723059938b967e') in 0.005435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.651595 seconds.
+  path: Assets/Prefabs/Player (1).prefab
+  artifactKey: Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player (1).prefab using Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 3eae78cb646c8b091c656dd943abcab6 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 3eae78cb646c8b091c656dd943abcab6 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '7ed345acf610158940efeb141995a5b1') in 0.003158 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.984808 seconds.
+  path: Assets/Prefabs/Player (1).prefab
+  artifactKey: Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player (1).prefab using Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 3eae78cb646c8b091c656dd943abcab6 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 3eae78cb646c8b091c656dd943abcab6 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '7ed345acf610158940efeb141995a5b1') in 0.003425 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002374 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.728 seconds
+Domain Reload Profiling:
+	ReloadAssembly (728ms)
+		BeginReloadAssembly (80ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (603ms)
+			LoadAssemblies (67ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (213ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (237ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (51ms)
+				ProcessInitializeOnLoadAttributes (167ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1453 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.4 MB.
+System memory in use after: 88.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1937.
+Total: 3.149800 ms (FindLiveObjects: 0.129300 ms CreateObjectMapping: 0.041200 ms MarkObjects: 2.952600 ms  DeleteObjects: 0.025000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 23.034273 seconds.
+  path: Assets/Prefabs/Player (1).prefab
+  artifactKey: Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player (1).prefab using Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 3eae78cb646c8b091c656dd943abcab6 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 3eae78cb646c8b091c656dd943abcab6 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '7ed345acf610158940efeb141995a5b1') in 0.009395 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002606 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.639 seconds
+Domain Reload Profiling:
+	ReloadAssembly (640ms)
+		BeginReloadAssembly (71ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (530ms)
+			LoadAssemblies (56ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (188ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (23ms)
+			SetupLoadedEditorAssemblies (211ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (45ms)
+				ProcessInitializeOnLoadAttributes (149ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (1ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1453 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.4 MB.
+System memory in use after: 88.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1937.
+Total: 1.800300 ms (FindLiveObjects: 0.074700 ms CreateObjectMapping: 0.025800 ms MarkObjects: 1.683400 ms  DeleteObjects: 0.015600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 22.527111 seconds.
+  path: Assets/Prefabs/Player (1).prefab
+  artifactKey: Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player (1).prefab using Guid(b45b92101eb4d6240b793647f2a15e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfded00 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 3eae78cb646c8b091c656dd943abcab6 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff64bff3df2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff64bfc3c72 (Unity) ResolveArtifactV2
+0x00007ff64bfbb9a1 (Unity) ProduceArtifactV2
+0x00007ff64bf5037e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff64bf3901b (Unity) PreviewImporter::GenerateAssetData
+0x00007ff64bfdf133 (Unity) ImportToObjects
+0x00007ff64bfde108 (Unity) ImportAsset
+0x00007ff64bf74c68 (Unity) AssetImportWorker::Import
+0x00007ff64bf9aaac (Unity) <lambda_6c894734dbee50c93f7912c8ad287316>::operator()
+0x00007ff64c02e8b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff64c01a7a2 (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff64c01c624 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff64c02cbef (Unity) IOService::Run
+0x00007ff64bfc498b (Unity) RunAssetImportWorkerClientV2
+0x00007ff64bfc49e0 (Unity) RunAssetImporterV2
+0x00007ff64ba34f38 (Unity) Application::InitializeProject
+0x00007ff64beb9db2 (Unity) WinMain
+0x00007ff64d5f78de (Unity) __scrt_common_main_seh
+0x00007ffc63a1257d (KERNEL32) BaseThreadInitThunk
+0x00007ffc659eaa58 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Player (1).prefab from editor
+Resuming Guid(b45b92101eb4d6240b793647f2a15e92) Importer(-1,00000000000000000000000000000000) -> 3eae78cb646c8b091c656dd943abcab6 
+Assertion failed on expression: 'state.state == kUpToDate'
+Assertion failed on expression: 'state.artifactID == result'
+ -> (artifact id: '7ed345acf610158940efeb141995a5b1') in 0.004691 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

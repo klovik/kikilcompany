@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - PlayerInventory
     - PlayerLook
     - PlayerMovement
+    - PlayerNetworking
     Mirror.Transports.dll:
     - kcp2k.KcpTransport
     Mirror.dll:
@@ -89,6 +90,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4306}
     - Class: 114
       Script: {instanceID: 18002}
+    - Class: 114
+      Script: {instanceID: 62304}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1386,6 +1389,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerLook
+  - hash:
+      serializedVersion: 2
+      Hash: 765de17146680ebc801685440251c084
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerNetworking
   platform: 19
   scenePathNames:
   - Assets/Scenes/Game.unity
