@@ -1,0 +1,457 @@
+/target:library
+/out:Temp/Mirror.Hosting.dll
+/nowarn:0169
+/nowarn:0649
+/refout:Temp/Mirror.Hosting.dll.ref
+/deterministic
+/debug:portable
+/optimize+
+/nostdlib+
+/preferreduilang:en-US
+/langversion:8.0
+/reference:Library/ScriptAssemblies/UnityEditor.UI.dll
+/reference:Library/ScriptAssemblies/UnityEngine.UI.dll
+/reference:Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll
+/reference:Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll
+/reference:Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll
+/reference:Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll
+/reference:"C:/Users/klovik/kikil company/Library/PackageCache/com.unity.collab-proxy@2.2.0/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
+/reference:"C:/Users/klovik/kikil company/Library/PackageCache/com.unity.collab-proxy@2.2.0/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
+/reference:"C:/Users/klovik/kikil company/Library/PackageCache/com.unity.collab-proxy@2.2.0/Lib/Editor/PlasticSCM/log4netPlastic.dll"
+/reference:"C:/Users/klovik/kikil company/Library/PackageCache/com.unity.collab-proxy@2.2.0/Lib/Editor/PlasticSCM/unityplastic.dll"
+/reference:"C:/Users/klovik/kikil company/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEditor.GraphViewModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEditor.PackageManagerUIModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEditor.SceneTemplateModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsSamplesModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIServiceModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEditor.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.GIModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubsystemsModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsNativeModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsCommonModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityCurlModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/Microsoft.Win32.Primitives.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.AppContext.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Concurrent.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.NonGeneric.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Specialized.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Annotations.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.EventBasedAsync.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Primitives.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.TypeConverter.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Console.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Data.Common.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Contracts.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Debug.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.FileVersionInfo.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Process.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.StackTrace.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TextWriterTraceListener.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Tools.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TraceSource.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Drawing.Primitives.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Dynamic.Runtime.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Calendars.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Extensions.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Compression.ZipFile.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.DriveInfo.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Primitives.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Watcher.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.IsolatedStorage.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.MemoryMappedFiles.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Pipes.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.UnmanagedMemoryStream.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Expressions.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Parallel.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Queryable.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Http.Rtc.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NameResolution.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NetworkInformation.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Ping.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Primitives.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Requests.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Security.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Sockets.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebHeaderCollection.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.Client.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ObjectModel.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.ILGeneration.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.Lightweight.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Extensions.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Primitives.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Reader.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.ResourceManager.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Writer.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.CompilerServices.VisualC.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Extensions.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Handles.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Numerics.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Formatters.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Json.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Primitives.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Xml.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Claims.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Algorithms.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Csp.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Encoding.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Primitives.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.X509Certificates.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Principal.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.SecureString.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Duplex.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Http.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.NetTcp.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Primitives.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Security.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.Extensions.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.RegularExpressions.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Overlapped.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.Parallel.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Thread.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.ThreadPool.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Timer.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ValueTuple.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.ReaderWriter.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XDocument.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlDocument.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlSerializer.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Data.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.IO.Compression.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Net.Http.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.Vectors.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Runtime.Serialization.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.Linq.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll"
+/reference:"D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll"
+/define:CSHARP_7_3_OR_NEWER
+/define:CSHARP_7_OR_LATER
+/define:DEBUG
+/define:ENABLE_AR
+/define:ENABLE_AUDIO
+/define:ENABLE_BURST_AOT
+/define:ENABLE_CACHING
+/define:ENABLE_CLOTH
+/define:ENABLE_CLOUD_LICENSE
+/define:ENABLE_CLOUD_SERVICES
+/define:ENABLE_CLOUD_SERVICES_ADS
+/define:ENABLE_CLOUD_SERVICES_ANALYTICS
+/define:ENABLE_CLOUD_SERVICES_BUILD
+/define:ENABLE_CLOUD_SERVICES_COLLAB
+/define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+/define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+/define:ENABLE_CLOUD_SERVICES_PURCHASING
+/define:ENABLE_CLOUD_SERVICES_UNET
+/define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+/define:ENABLE_CLUSTERINPUT
+/define:ENABLE_CLUSTER_SYNC
+/define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+/define:ENABLE_CUSTOM_RENDER_TEXTURE
+/define:ENABLE_DIRECTOR
+/define:ENABLE_DIRECTOR_AUDIO
+/define:ENABLE_DIRECTOR_TEXTURE
+/define:ENABLE_EDITOR_HUB_LICENSE
+/define:ENABLE_EVENT_QUEUE
+/define:ENABLE_LEGACY_INPUT_MANAGER
+/define:ENABLE_LOCALIZATION
+/define:ENABLE_LZMA
+/define:ENABLE_MANAGED_ANIMATION_JOBS
+/define:ENABLE_MANAGED_AUDIO_JOBS
+/define:ENABLE_MANAGED_JOBS
+/define:ENABLE_MANAGED_TRANSFORM_JOBS
+/define:ENABLE_MANAGED_UNITYTLS
+/define:ENABLE_MICROPHONE
+/define:ENABLE_MONO
+/define:ENABLE_MONO_BDWGC
+/define:ENABLE_MOVIES
+/define:ENABLE_MULTIPLE_DISPLAYS
+/define:ENABLE_NETWORK
+/define:ENABLE_OUT_OF_PROCESS_CRASH_HANDLER
+/define:ENABLE_PHYSICS
+/define:ENABLE_PROFILER
+/define:ENABLE_RUNTIME_GI
+/define:ENABLE_SCRIPTING_GC_WBARRIERS
+/define:ENABLE_SPRITES
+/define:ENABLE_TERRAIN
+/define:ENABLE_TEXTURE_STREAMING
+/define:ENABLE_TILEMAP
+/define:ENABLE_TIMELINE
+/define:ENABLE_UNET
+/define:ENABLE_UNITYEVENTS
+/define:ENABLE_UNITYWEBREQUEST
+/define:ENABLE_UNITY_COLLECTIONS_CHECKS
+/define:ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT
+/define:ENABLE_VIDEO
+/define:ENABLE_VIRTUALTEXTURING
+/define:ENABLE_VR
+/define:ENABLE_WEBCAM
+/define:ENABLE_WEBSOCKET_CLIENT
+/define:ENABLE_WEBSOCKET_HOST
+/define:ENABLE_WWW
+/define:GFXDEVICE_WAITFOREVENT_MESSAGEPUMP
+/define:INCLUDE_DYNAMIC_GI
+/define:MIRROR
+/define:MIRROR_70_OR_NEWER
+/define:MIRROR_71_OR_NEWER
+/define:MIRROR_73_OR_NEWER
+/define:MIRROR_78_OR_NEWER
+/define:MIRROR_79_OR_NEWER
+/define:MIRROR_81_OR_NEWER
+/define:MIRROR_82_OR_NEWER
+/define:MIRROR_83_OR_NEWER
+/define:MIRROR_84_OR_NEWER
+/define:MIRROR_85_OR_NEWER
+/define:MIRROR_86_OR_NEWER
+/define:NET_4_6
+/define:PLATFORM_ARCH_64
+/define:PLATFORM_STANDALONE
+/define:PLATFORM_STANDALONE_WIN
+/define:PLATFORM_SUPPORTS_MONO
+/define:PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP
+/define:RENDER_SOFTWARE_CURSOR
+/define:TRACE
+/define:UNITY_2017_1_OR_NEWER
+/define:UNITY_2017_2_OR_NEWER
+/define:UNITY_2017_3_OR_NEWER
+/define:UNITY_2017_4_OR_NEWER
+/define:UNITY_2018_1_OR_NEWER
+/define:UNITY_2018_2_OR_NEWER
+/define:UNITY_2018_3_OR_NEWER
+/define:UNITY_2018_4_OR_NEWER
+/define:UNITY_2019_1_OR_NEWER
+/define:UNITY_2019_2_OR_NEWER
+/define:UNITY_2019_3_OR_NEWER
+/define:UNITY_2019_4_OR_NEWER
+/define:UNITY_2020
+/define:UNITY_2020_1_OR_NEWER
+/define:UNITY_2020_2_OR_NEWER
+/define:UNITY_2020_3
+/define:UNITY_2020_3_48
+/define:UNITY_2020_3_OR_NEWER
+/define:UNITY_5_3_OR_NEWER
+/define:UNITY_5_4_OR_NEWER
+/define:UNITY_5_5_OR_NEWER
+/define:UNITY_5_6_OR_NEWER
+/define:UNITY_64
+/define:UNITY_ASSERTIONS
+/define:UNITY_EDITOR
+/define:UNITY_EDITOR_64
+/define:UNITY_EDITOR_WIN
+/define:UNITY_INCLUDE_TESTS
+/define:UNITY_STANDALONE
+/define:UNITY_STANDALONE_WIN
+/define:UNITY_TEAM_LICENSE
+Assets\Mirror\Hosting\Edgegap\Dependencies\HttpEncoder.cs
+Assets\Mirror\Hosting\Edgegap\Dependencies\HttpUtility.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\EdgegapApiBase.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\EdgegapAppApi.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\EdgegapDeploymentsApi.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\EdgegapIpApi.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\EdgegapWizardApi.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\AppPortsData.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\DeploymentPortsData.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\LocationData.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\ProtocolType.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Requests\CreateAppRequest.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Requests\CreateAppVersionRequest.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Requests\CreateDeploymentRequest.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Requests\UpdateAppVersionRequest.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Results\CreateDeploymentResult.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Results\EdgegapErrorResult.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Results\EdgegapHttpResult.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Results\GetCreateAppResult.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Results\GetDeploymentStatusResult.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Results\GetRegistryCredentialsResult.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Results\GetYourPublicIpResult.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Results\StopActiveDeploymentResult.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\Results\UpsertAppVersionResult.cs
+Assets\Mirror\Hosting\Edgegap\Editor\Api\Models\SessionData.cs
+Assets\Mirror\Hosting\Edgegap\Editor\ButtonShaker.cs
+Assets\Mirror\Hosting\Edgegap\Editor\EdgegapBuildUtils.cs
+Assets\Mirror\Hosting\Edgegap\Editor\EdgegapScriptEditor.cs
+Assets\Mirror\Hosting\Edgegap\Editor\EdgegapServerDataManager.cs
+Assets\Mirror\Hosting\Edgegap\Editor\EdgegapToolScript.cs
+Assets\Mirror\Hosting\Edgegap\Editor\EdgegapWindow.cs
+Assets\Mirror\Hosting\Edgegap\Editor\EdgegapWindowMetadata.cs
+Assets\Mirror\Hosting\Edgegap\Editor\EdgegapWindowV2.cs
+Assets\Mirror\Hosting\Edgegap\Enums\ApiEnvironment.cs
+Assets\Mirror\Hosting\Edgegap\Enums\ServerStatus.cs
+Assets\Mirror\Hosting\Edgegap\Enums\ToolState.cs
+Assets\Mirror\Hosting\Edgegap\Models\AppVersionUpdatePatchData.cs
+Assets\Mirror\Hosting\Edgegap\Models\DeployPostData.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\ApiModelContainercrashdata.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\ApiModelContainerlogs.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppCreation.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersion.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersionCreateSessionConfig.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersionEnv.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersionPort.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersionProbe.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersionUpdate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersionUpdateSessionConfig.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersionWhitelistEntry.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersionWhitelistEntryPayload.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersionWhitelistEntrySuccess.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersionWhitelistResponse.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\AppVersions.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Application.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\ApplicationPatch.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\ApplicationPost.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Applications.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\BaseModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\BulkSessionDelete.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\BulkSessionPost.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\ComponentCredentials.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\ContainerLogStorageModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\CustomBulkSessionModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\CustomBulkSessionsModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\CustomSessionDeleteModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\CustomSessionModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Delete.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\DeployEnvModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\DeployModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Deployment.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\DeploymentLocation.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\DeploymentSessionContext.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Deployments.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Error.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\GeoIpListModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Location.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\LocationModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Locations.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerComponentCreate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerComponentEnvListResponse.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerComponentEnvsCreate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerComponentEnvsResponse.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerComponentEnvsUpdate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerComponentListResponse.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerComponentResponse.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerComponentUpdate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerCreate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerListResponse.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerManagedReleaseCreate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerManagedReleaseResponse.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerManagedReleaseUpdate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerReleaseConfigCreate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerReleaseConfigResponse.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerReleaseConfigUpdate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerReleaseCreate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerReleaseCreateBase.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerReleaseResponse.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerReleaseResponseBase.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerReleaseUpdate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerReleaseUpdateBase.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerResponse.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MatchmakerUpdate.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MetricsModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\MetricsResponse.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Monitor.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\NetworkMetricsModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Pagination.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Paginator.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\PatchSessionModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\PortMapping.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Request.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\SelectorEnvModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\SelectorModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\SessionContext.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\SessionDelete.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\SessionGet.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\SessionModel.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\SessionRequest.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\SessionUser.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\SessionUserContext.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Sessions.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\StaticSites.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\StaticSitesList.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\Status.cs
+Assets\Mirror\Hosting\Edgegap\Models\SDK\TotalMetricsModel.cs
