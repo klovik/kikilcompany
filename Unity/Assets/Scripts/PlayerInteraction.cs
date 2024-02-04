@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Networking;
+using Mirror;
 
-public class PlayerInteraction : MonoBehaviour
+public class PlayerInteraction : NetworkBehaviour
 {
     public Camera cam;
+    public Text itemLabelText;
+    float rayLength = 3f;
 
     private void Start()
     {
@@ -13,13 +18,27 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
+        if (!isLocalPlayer) return;
         RaycastHit hit;
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, rayLength))
         {
-            print(hit.collider.name);
+            if(hit.collider.tag == "Item")
+            {
+                string itemName = hit.collider.gameObject.GetComponent<Item>().itemName;
+                string itemPrice = hit.collider.gameObject.GetComponent<Item>().price.ToString();
+                itemLabelText.text = $"[{itemPrice}] {itemName}";
+            }
+            else if(hit.collider.tag == "Interactable")
+            {
+                itemLabelText.text = hit.collider.gameObject.GetComponent<Label>().text;
+            }
         }
-        Debug.DrawRay(transform.position, ray.direction, Color.yellow);
+        else
+        {
+            itemLabelText.text = "";
+        }
+        Debug.DrawRay(cam.transform.position, ray.direction * 2, Color.yellow);
     }
 }

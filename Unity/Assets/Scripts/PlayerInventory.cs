@@ -12,10 +12,15 @@ public class PlayerInventory : MonoBehaviour
     private Vector3 activeInventorySlotScale = new Vector3(0.5f, 0.5f, 0.5f);
     private Vector3 notActiveInventorySlotScale = new Vector3(0.4f, 0.4f, 0.4f);
 
+    void Start()
+    {
+        UpdateInventorySlotsSizes();
+    }
+
     private void Update()
     {
         //scrolling inventory slots
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             if (activeSlot == 2)
                 activeSlot = 0;
@@ -23,7 +28,7 @@ public class PlayerInventory : MonoBehaviour
                 activeSlot++;
             UpdateInventorySlotsSizes();
         }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             if (activeSlot == 0)
                 activeSlot = 2;

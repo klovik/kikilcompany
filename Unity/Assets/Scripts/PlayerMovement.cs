@@ -1,47 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using Mirror;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
-    [Header("Attributes")]
-    public float currentSpeed = 3.5f;
-    public float mouseSpeed = 5.0f;
-    [Header("Keybinds")]
-    public KeyCode forward = KeyCode.W;
-    public KeyCode left = KeyCode.A;
-    public KeyCode back = KeyCode.S;
-    public KeyCode right = KeyCode.D;
+    public float speed = 5;
 
-    [Header("Debug")]
-    public float mouseX;
-    public float mouseY;
-    public GameObject playerCam;
-    private void Awake()
+    [Header("Running")]
+    public bool canRun = true;
+    public bool IsRunning { get; private set; }
+    public float runSpeed = 9;
+    public KeyCode runningKey = KeyCode.LeftShift;
+
+    Rigidbody rb;
+    public List<System.Func<float>> speedOverrides = new List<System.Func<float>>();
+
+    void Awake()
     {
-        Cursor.visible = false;
+        rb = GetComponent<Rigidbody>();
     }
-    private void FixedUpdate()
+
+    void FixedUpdate()
     {
-        mouseX += Input.GetAxis("Mouse X") * Time.deltaTime * mouseSpeed;
-        mouseY += Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSpeed;
-
-        if (mouseY > 90)
-            mouseY = 90;
-        if (mouseY < -90)
-            mouseY = -90;
-
-        if (Input.GetKey(forward))
-            transform.Translate(new Vector3(0, 0, currentSpeed * Time.fixedDeltaTime));
-        if (Input.GetKey(left))
-            transform.Translate(new Vector3(-currentSpeed * Time.fixedDeltaTime, 0, 0));
-        if (Input.GetKey(back))
-            transform.Translate(new Vector3(0, 0, -currentSpeed * Time.fixedDeltaTime));
-        if (Input.GetKey(right))
-            transform.Translate(new Vector3(currentSpeed * Time.fixedDeltaTime, 0, 0));
-
-        transform.rotation = Quaternion.Euler(0, mouseX, 0);
-        playerCam.transform.rotation = Quaternion.Euler(-mouseY, mouseX, 0);
+        if (!isLocalPlayer) return;
+        IsRunning = canRun && Input.GetKey(runningKey);
+        float targetMovingSpeed = IsRunning ? runSpeed : speed;
+        if (speedOverrides.Count > 0)
+            targetMovingSpeed = speedOverrides[speedOverrides.Count - 1]();
+        Vector2 targetVelocity = new Vector2(Input.GetAxis("Horizontal") * targetMovingSpeed, Input.GetAxis("Vertical") * targetMovingSpeed);
+        rb.velocity = transform.rotation * new Vector3(targetVelocity.x, rb.velocity.y, targetVelocity.y);
     }
 }
