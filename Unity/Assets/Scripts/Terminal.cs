@@ -86,7 +86,7 @@ public class Terminal : MonoBehaviour
                     }
                     break;
                 }
-                catch(Exception e)
+                catch
                 {
                     Print(Error.Failed);
                 }
