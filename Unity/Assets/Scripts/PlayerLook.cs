@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class PlayerLook : MonoBehaviour
+public class PlayerLook : NetworkBehaviour
 {
     [SerializeField]
     Transform character;
@@ -11,8 +12,6 @@ public class PlayerLook : MonoBehaviour
 
     Vector2 velocity;
     Vector2 frameVelocity;
-    public GameObject playerModelNeck;
-    public GameObject playerTorso;
 
 
     void Reset()
@@ -27,14 +26,15 @@ public class PlayerLook : MonoBehaviour
 
     void Update()
     {
-        //if (!isLocalPlayer) return;
-        Vector2 mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
-        Vector2 rawFrameVelocity = Vector2.Scale(mouseDelta, Vector2.one * sensitivity);
-        frameVelocity = Vector2.Lerp(frameVelocity, rawFrameVelocity, 1 / smoothing);
-        velocity += frameVelocity;
-        velocity.y = Mathf.Clamp(velocity.y, -90, 90);
-        transform.localRotation = Quaternion.AngleAxis(-velocity.y, Vector3.right);
-        playerTorso.transform.localRotation = Quaternion.AngleAxis(-velocity.y, Vector3.forward);
-        character.localRotation = Quaternion.AngleAxis(velocity.x, Vector3.up);
+        if (isLocalPlayer)
+        {
+            Vector2 mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+            Vector2 rawFrameVelocity = Vector2.Scale(mouseDelta, Vector2.one * sensitivity);
+            frameVelocity = Vector2.Lerp(frameVelocity, rawFrameVelocity, 1 / smoothing);
+            velocity += frameVelocity;
+            velocity.y = Mathf.Clamp(velocity.y, -90, 90);
+            transform.localRotation = Quaternion.AngleAxis(-velocity.y, Vector3.right);
+            character.localRotation = Quaternion.AngleAxis(velocity.x, Vector3.up);
+        }
     }
 }

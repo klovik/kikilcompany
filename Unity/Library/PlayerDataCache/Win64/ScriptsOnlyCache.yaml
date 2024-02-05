@@ -1,18 +1,20 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CustomNetworkManager
     - Item
     - Label
-    - PlayerInteraction
-    - PlayerInventory
-    - PlayerLook
-    - PlayerMovement
-    - PlayerNetworking
+    - NetworkController
+    - StolenPlayerController
+    Mirror.Components.dll:
+    - Mirror.Discovery.NetworkDiscovery
+    - Mirror.NetworkRigidbodyUnreliable
+    - Mirror.NetworkTransformReliable
+    - Mirror.NetworkTransformUnreliable
     Mirror.Transports.dll:
     - kcp2k.KcpTransport
     Mirror.dll:
     - Mirror.NetworkIdentity
-    - Mirror.NetworkManager
     - Mirror.NetworkManagerHUD
     - Mirror.NetworkStartPosition
     UnityEngine.UI.dll:
@@ -46,8 +48,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 95
@@ -65,33 +65,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1522}
     - Class: 114
-      Script: {instanceID: 2388}
+      Script: {instanceID: 1656}
     - Class: 114
-      Script: {instanceID: 2462}
+      Script: {instanceID: 2380}
     - Class: 114
-      Script: {instanceID: 2558}
+      Script: {instanceID: 2454}
     - Class: 114
-      Script: {instanceID: 2716}
+      Script: {instanceID: 2550}
     - Class: 114
-      Script: {instanceID: 2876}
+      Script: {instanceID: 2708}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2820}
     - Class: 114
-      Script: {instanceID: 3410}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3440}
+      Script: {instanceID: 3430}
     - Class: 114
-      Script: {instanceID: 3614}
+      Script: {instanceID: 3532}
     - Class: 114
-      Script: {instanceID: 4000}
+      Script: {instanceID: 3988}
     - Class: 114
-      Script: {instanceID: 4106}
+      Script: {instanceID: 4094}
     - Class: 114
-      Script: {instanceID: 4306}
+      Script: {instanceID: 4294}
     - Class: 114
-      Script: {instanceID: 18002}
+      Script: {instanceID: 17782}
     - Class: 114
-      Script: {instanceID: 62304}
+      Script: {instanceID: 19504}
+    - Class: 114
+      Script: {instanceID: 25446}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -103,6 +105,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -557,6 +561,12 @@ ScriptsOnlyBuild:
     className: NetworkMatch
   - hash:
       serializedVersion: 2
+      Hash: c1b93edd27cf49b6051604f5878a63a4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerLook
+  - hash:
+      serializedVersion: 2
       Hash: d20d0a547b0ef918bdaa0fd64cc37717
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
@@ -761,7 +771,7 @@ ScriptsOnlyBuild:
     className: FaceCamera
   - hash:
       serializedVersion: 2
-      Hash: c8411a374c83e6cfb9e9c8420f7e7ab3
+      Hash: bb22e14052321c02d95d52f52ec9586f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -977,7 +987,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: b5f1eb32fffd0b8b5ec3d9e324805e7c
+      Hash: 9d0e8be37c05971e0d449f9c10dafda3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerInteraction
@@ -1049,7 +1059,7 @@ ScriptsOnlyBuild:
     className: GUIConsole
   - hash:
       serializedVersion: 2
-      Hash: ae3ebf1f1ac3d86bddd58b01c796fa32
+      Hash: bf2e9430095f043559947f66832e5215
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerInventory
@@ -1343,7 +1353,7 @@ ScriptsOnlyBuild:
     className: BasicAuthenticator
   - hash:
       serializedVersion: 2
-      Hash: 0f52e4312c5884ee1c08073e20fe9e3c
+      Hash: ad5b0741975eedab188e9205597580c4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Item
@@ -1385,17 +1395,23 @@ ScriptsOnlyBuild:
     className: AuthorityNetworkManager
   - hash:
       serializedVersion: 2
-      Hash: 3c0cf5457e9bcd559fb1d71376d0e51f
+      Hash: ee3b97d2d3f6ad7311b73b2bac6b8a52
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerLook
+    className: NetworkController
   - hash:
       serializedVersion: 2
-      Hash: 765de17146680ebc801685440251c084
+      Hash: e6a95e8354403a6c69ad49fa7d1cf794
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerNetworking
+    className: CustomNetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: fa63d39098d4b63fbe68cb3732a9561f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StolenPlayerController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/klovik/kikil company/Builds/Test/kikil company.exe
+  playerPath: C:/Users/klovik/kikil company/Builds/testes/kikil company.exe

@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\klovik\\kikil company\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerNetworking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerNetworking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2917ECE5-BC99-EE98-2A6E-F0396DBD2FD4}|Mirror.Transports.csproj|c:\\users\\klovik\\kikil company\\assets\\thirdparty\\mirror\\transports\\kcp\\kcptransport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2917ECE5-BC99-EE98-2A6E-F0396DBD2FD4}|Mirror.Transports.csproj|solutionrelative:assets\\thirdparty\\mirror\\transports\\kcp\\kcptransport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\playerlook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerlook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|c:\\users\\klovik\\kikil company\\assets\\scripts\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|c:\\users\\klovik\\kikil company\\assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFCFD4FE-E399-AD4C-5064-FAD49BF24E64}|Mirror.Examples.csproj|c:\\users\\klovik\\kikil company\\assets\\thirdparty\\mirror\\examples\\tanks\\scripts\\tank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFCFD4FE-E399-AD4C-5064-FAD49BF24E64}|Mirror.Examples.csproj|solutionrelative:assets\\thirdparty\\mirror\\examples\\tanks\\scripts\\tank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{802A7A89-2C99-01F4-09CB-72350F03B154}|Mirror.csproj|C:\\Users\\klovik\\kikil company\\assets\\thirdparty\\mirror\\core\\networkbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{802A7A89-2C99-01F4-09CB-72350F03B154}|Mirror.csproj|solutionrelative:assets\\thirdparty\\mirror\\core\\networkbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerNetworking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerNetworking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFCFD4FE-E399-AD4C-5064-FAD49BF24E64}|Mirror.Examples.csproj|C:\\Users\\klovik\\kikil company\\assets\\thirdparty\\mirror\\examples\\basic\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5DB0ED47-CB84-8967-6A80-CA69D553027B}|Mirror.Editor.csproj|C:\\Users\\klovik\\kikil company\\assets\\thirdparty\\mirror\\editor\\mirror.editor.asmdef||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{5DB0ED47-CB84-8967-6A80-CA69D553027B}|Mirror.Editor.csproj|solutionrelative:assets\\thirdparty\\mirror\\editor\\mirror.editor.asmdef||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\label.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,15 +91,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlayerNetworking.cs",
-              "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerNetworking.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerNetworking.cs",
-              "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerNetworking.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerNetworking.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "KcpTransport.cs",
+              "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Thirdparty\\Mirror\\Transports\\KCP\\KcpTransport.cs",
+              "RelativeDocumentMoniker": "Assets\\Thirdparty\\Mirror\\Transports\\KCP\\KcpTransport.cs",
+              "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Thirdparty\\Mirror\\Transports\\KCP\\KcpTransport.cs",
+              "RelativeToolTip": "Assets\\Thirdparty\\Mirror\\Transports\\KCP\\KcpTransport.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAswHYAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-04T20:00:00.3Z",
+              "WhenOpened": "2024-02-05T05:33:35.76Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Tank.cs",
+              "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Thirdparty\\Mirror\\Examples\\Tanks\\Scripts\\Tank.cs",
+              "RelativeDocumentMoniker": "Assets\\Thirdparty\\Mirror\\Examples\\Tanks\\Scripts\\Tank.cs",
+              "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Thirdparty\\Mirror\\Examples\\Tanks\\Scripts\\Tank.cs",
+              "RelativeToolTip": "Assets\\Thirdparty\\Mirror\\Examples\\Tanks\\Scripts\\Tank.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAAABUAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-05T04:57:00.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NetworkBehaviour.cs",
+              "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Thirdparty\\Mirror\\Core\\NetworkBehaviour.cs",
+              "RelativeDocumentMoniker": "Assets\\Thirdparty\\Mirror\\Core\\NetworkBehaviour.cs",
+              "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Thirdparty\\Mirror\\Core\\NetworkBehaviour.cs",
+              "RelativeToolTip": "Assets\\Thirdparty\\Mirror\\Core\\NetworkBehaviour.cs",
+              "ViewState": "AQIAADYBAAAAAAAAAAAEwEQBAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-05T01:32:41.509Z"
             },
             {
               "$type": "Document",
@@ -97,7 +134,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerLook.cs",
               "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerLook.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerLook.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB0AAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-04T17:51:29.67Z",
               "EditorCaption": ""
@@ -105,18 +142,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "NetworkBehaviour.cs",
-              "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Mirror\\Core\\NetworkBehaviour.cs",
-              "RelativeDocumentMoniker": "Assets\\Mirror\\Core\\NetworkBehaviour.cs",
-              "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Mirror\\Core\\NetworkBehaviour.cs",
-              "RelativeToolTip": "Assets\\Mirror\\Core\\NetworkBehaviour.cs",
-              "ViewState": "AQIAADkBAAAAAAAAAAAEwEUBAACXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-04T17:34:09.862Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "FirstPersonMovement.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Mini First Person Controller\\Scripts\\FirstPersonMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Mini First Person Controller\\Scripts\\FirstPersonMovement.cs",
@@ -128,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "PlayerMovementOld.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerMovementOld.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovementOld.cs",
@@ -140,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "FirstPersonLook.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Mini First Person Controller\\Scripts\\FirstPersonLook.cs",
               "RelativeDocumentMoniker": "Assets\\Mini First Person Controller\\Scripts\\FirstPersonLook.cs",
@@ -152,20 +177,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-04T17:21:00.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "Readme.txt",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Mirror\\Readme.txt",
               "RelativeDocumentMoniker": "Assets\\Mirror\\Readme.txt",
@@ -177,13 +202,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "PlayerInteraction.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerInteraction.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInteraction.cs",
               "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerInteraction.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerInteraction.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAcAAAAxAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAAC4AAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-04T15:22:35.678Z",
               "EditorCaption": ""
@@ -196,7 +221,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInventory.cs",
               "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerInventory.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerInventory.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAADkAAAAUAAAA",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAAAE0AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-04T15:06:58.791Z",
               "EditorCaption": ""
@@ -204,6 +229,42 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\Item.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Item.cs",
+              "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\Item.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-04T15:05:33.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "NetworkBehaviour.cs",
+              "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Mirror\\Core\\NetworkBehaviour.cs",
+              "RelativeDocumentMoniker": "Assets\\Mirror\\Core\\NetworkBehaviour.cs",
+              "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Mirror\\Core\\NetworkBehaviour.cs",
+              "RelativeToolTip": "Assets\\Mirror\\Core\\NetworkBehaviour.cs",
+              "ViewState": "AQIAADkBAAAAAAAAAAAEwEUBAACXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-04T17:34:09.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlayerNetworking.cs",
+              "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerNetworking.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerNetworking.cs",
+              "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerNetworking.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerNetworking.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-04T20:00:00.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Mirror.Editor.asmdef",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Thirdparty\\Mirror\\Editor\\Mirror.Editor.asmdef",
               "RelativeDocumentMoniker": "Assets\\Thirdparty\\Mirror\\Editor\\Mirror.Editor.asmdef",
@@ -215,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Thirdparty\\Mirror\\Examples\\Basic\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Thirdparty\\Mirror\\Examples\\Basic\\Scripts\\Player.cs",
@@ -227,19 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\Item.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Item.cs",
-              "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\Item.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Item.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-04T15:05:33.826Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Label.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\Label.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Label.cs",
@@ -251,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "PlayerInteraction1.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerInteraction1.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInteraction1.cs",
@@ -263,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
