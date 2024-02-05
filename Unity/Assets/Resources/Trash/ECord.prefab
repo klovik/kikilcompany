@@ -81,6 +81,7 @@ MonoBehaviour:
   itemName: Electrical Cord
   price: 100
   heavy: 0
+  weight: 0.4
   itemType: 2
 --- !u!1 &2874726344915603621
 GameObject:
