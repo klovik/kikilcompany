@@ -51,9 +51,10 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
      <Compile Include="Assets\Scripts\Label.cs" />
+     <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\Scripts\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
-     <Compile Include="Assets\Scripts\MenuManager.cs" />
+     <Compile Include="Assets\Scripts\Terminal.cs" />
      <None Include="Assets\Thirdparty\Mirror\Version.txt" />
      <None Include="Assets\Thirdparty\Mirror\Readme.txt" />
      <None Include="Assets\Thirdparty\Mirror\Notice.txt" />

@@ -11,6 +11,7 @@ public class PlayerInteraction : MonoBehaviour
     float rayLength = 3f;
     public KeyCode interactionKey = KeyCode.E;
     public KeyCode dropKey = KeyCode.G;
+    public GameObject consolePanel;
 
     private void Start()
     {
@@ -48,6 +49,10 @@ public class PlayerInteraction : MonoBehaviour
             }
             else if(hit.collider.tag == "Interactable")
             {
+                if (Input.GetKeyDown(interactionKey) && hit.collider.name == "Terminal")
+                {
+                    ChangeConsoleState(true);
+                }
                 itemLabelText.text = hit.collider.gameObject.GetComponent<Label>().text;
             }
         }
@@ -56,5 +61,11 @@ public class PlayerInteraction : MonoBehaviour
             itemLabelText.text = "";
         }
         Debug.DrawRay(cam.transform.position, ray.direction * 2, Color.yellow);
+    }
+
+    public void ChangeConsoleState(bool state)
+    {
+        consolePanel.SetActive(state);
+        gameObject.GetComponent<PlayerMovement>().ChangePlayerMovementAbility(!state);
     }
 }

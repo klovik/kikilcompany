@@ -99,7 +99,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void UpdateInventoryText()
     {
-        inventoryText.text = $"{inventory[0]}, {inventory[1]}, {inventory[2]}";
+        if(inventoryText != null) inventoryText.text = $"{inventory[0]}, {inventory[1]}, {inventory[2]}";
     }
 
     private void RenderItemsInHotbar()

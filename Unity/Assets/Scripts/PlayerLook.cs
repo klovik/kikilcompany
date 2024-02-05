@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
+    public bool canMoveMouse = true;
     [SerializeField]
     Transform character;
     public float sensitivity = 2;
@@ -27,14 +28,16 @@ public class PlayerLook : MonoBehaviour
 
     void Update()
     {
-        //if (!isLocalPlayer) return;
-        Vector2 mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
-        Vector2 rawFrameVelocity = Vector2.Scale(mouseDelta, Vector2.one * sensitivity);
-        frameVelocity = Vector2.Lerp(frameVelocity, rawFrameVelocity, 1 / smoothing);
-        velocity += frameVelocity;
-        velocity.y = Mathf.Clamp(velocity.y, -90, 90);
-        transform.localRotation = Quaternion.AngleAxis(-velocity.y, Vector3.right);
-        playerTorso.transform.localRotation = Quaternion.AngleAxis(-velocity.y, Vector3.forward);
-        character.localRotation = Quaternion.AngleAxis(velocity.x, Vector3.up);
+        if (canMoveMouse)
+        {
+            Vector2 mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+            Vector2 rawFrameVelocity = Vector2.Scale(mouseDelta, Vector2.one * sensitivity);
+            frameVelocity = Vector2.Lerp(frameVelocity, rawFrameVelocity, 1 / smoothing);
+            velocity += frameVelocity;
+            velocity.y = Mathf.Clamp(velocity.y, -90, 90);
+            transform.localRotation = Quaternion.AngleAxis(-velocity.y, Vector3.right);
+            playerTorso.transform.localRotation = Quaternion.AngleAxis(-velocity.y, Vector3.forward);
+            character.localRotation = Quaternion.AngleAxis(velocity.x, Vector3.up);
+        }
     }
 }
