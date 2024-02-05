@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class PlayerMovement : NetworkBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5;
 
@@ -23,7 +22,7 @@ public class PlayerMovement : NetworkBehaviour
 
     void FixedUpdate()
     {
-        if (!isLocalPlayer) return;
+        //if (!isLocalPlayer) return;
         IsRunning = canRun && Input.GetKey(runningKey);
         float targetMovingSpeed = IsRunning ? runSpeed : speed;
         if (speedOverrides.Count > 0)

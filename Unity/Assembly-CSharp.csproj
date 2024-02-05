@@ -47,12 +47,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\PlayerLook.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
      <Compile Include="Assets\Scripts\Label.cs" />
      <Compile Include="Assets\Scripts\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
-     <Compile Include="Assets\Scripts\PlayerLook.cs" />
      <None Include="Assets\Thirdparty\Mirror\Version.txt" />
      <None Include="Assets\Thirdparty\Mirror\Readme.txt" />
      <None Include="Assets\Thirdparty\Mirror\Notice.txt" />
@@ -282,9 +282,6 @@
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/klovik/kikil company/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
- </Reference>
  <Reference Include="Mono.CecilX.Rocks">
  <HintPath>C:/Users/klovik/kikil company/Assets/Thirdparty/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
  </Reference>
@@ -293,6 +290,9 @@
  </Reference>
  <Reference Include="Mono.CecilX">
  <HintPath>C:/Users/klovik/kikil company/Assets/Thirdparty/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/klovik/kikil company/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Mdb">
  <HintPath>C:/Users/klovik/kikil company/Assets/Thirdparty/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
@@ -665,44 +665,9 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Mirror.Transports.csproj">
-      <Project>{2917ECE5-BC99-EE98-2A6E-F0396DBD2FD4}</Project>
-      <Name>Mirror.Transports</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Authenticators.csproj">
-      <Project>{438D0F49-97BF-A399-92AF-A95FBAB10E82}</Project>
-      <Name>Mirror.Authenticators</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Components.csproj">
-      <Project>{5AE4035A-F690-E579-8B79-89683D2268E0}</Project>
-      <Name>Mirror.Components</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.csproj">
-      <Project>{BFCFD4FE-E399-AD4C-5064-FAD49BF24E64}</Project>
-      <Name>Mirror.Examples</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.CompilerSymbols.csproj">
-      <Project>{15418CFF-0C0A-A0BE-8F8D-5BEED1305042}</Project>
-      <Name>Mirror.CompilerSymbols</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Telepathy.csproj">
-      <Project>{F9D1F1EB-0703-3DB9-7534-3355F508DC0A}</Project>
-      <Name>Telepathy</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="Mirror.csproj">
       <Project>{802A7A89-2C99-01F4-09CB-72350F03B154}</Project>
       <Name>Mirror</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Editor.csproj">
-      <Project>{5DB0ED47-CB84-8967-6A80-CA69D553027B}</Project>
-      <Name>Mirror.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="kcp2k.csproj">
@@ -715,9 +680,44 @@
       <Name>Mirror.Hosting</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="Mirror.Editor.csproj">
+      <Project>{5DB0ED47-CB84-8967-6A80-CA69D553027B}</Project>
+      <Name>Mirror.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Examples.csproj">
+      <Project>{BFCFD4FE-E399-AD4C-5064-FAD49BF24E64}</Project>
+      <Name>Mirror.Examples</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.CompilerSymbols.csproj">
+      <Project>{15418CFF-0C0A-A0BE-8F8D-5BEED1305042}</Project>
+      <Name>Mirror.CompilerSymbols</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Authenticators.csproj">
+      <Project>{438D0F49-97BF-A399-92AF-A95FBAB10E82}</Project>
+      <Name>Mirror.Authenticators</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Telepathy.csproj">
+      <Project>{F9D1F1EB-0703-3DB9-7534-3355F508DC0A}</Project>
+      <Name>Telepathy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="SimpleWebTransport.csproj">
       <Project>{DF32197D-B80D-F040-17EA-B72A822EF967}</Project>
       <Name>SimpleWebTransport</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Transports.csproj">
+      <Project>{2917ECE5-BC99-EE98-2A6E-F0396DBD2FD4}</Project>
+      <Name>Mirror.Transports</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Components.csproj">
+      <Project>{5AE4035A-F690-E579-8B79-89683D2268E0}</Project>
+      <Name>Mirror.Components</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
