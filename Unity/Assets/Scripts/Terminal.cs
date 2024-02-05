@@ -91,56 +91,56 @@ public class Terminal : MonoBehaviour
                     Print(Error.Failed);
                 }
                 break;
-            case "scene":
-                if(debugging)
-                {
-                    if(text.Split(' ').Length == 1)
-                    {
-                        Print(SceneManager.GetActiveScene().path);
-                    }
-                    else if (text.Split(' ').Length == 2)
-                    {
-                        try
-                        {
-                            string requestedScene = text.Split(' ')[1];
-                            List<string> scenes = new List<string>();
-                            foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
-                            {
-                                Print(scene.path);
-                                if (scene.enabled && scene.path.Split('/')[2] == requestedScene + ".unity")
-                                    SceneManager.LoadScene(requestedScene);
-                            }
-                        }
-                        catch
-                        {
-                            Print(Error.Failed); break;
-                        }  
-                    }
-                    else
-                    {
-                        Print(Error.Construction);
-                    }
-                    break;
-                }
-                else
-                {
-                    Print(Error.NotAnDev); break;
-                }
-            case "scenes":
-                try
-                {
-                    List<string> scenes = new List<string>();
-                    foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
-                    {
-                        if (scene.enabled)
-                            Print(scene.path);
-                    }
-                }
-                catch
-                {
-                    Print(Error.Failed);
-                }
-                break;
+            //case "scene":
+            //    if(debugging)
+            //    {
+            //        if(text.Split(' ').Length == 1)
+            //        {
+            //            Print(SceneManager.GetActiveScene().path);
+            //        }
+            //        else if (text.Split(' ').Length == 2)
+            //        {
+            //            try
+            //            {
+            //                string requestedScene = text.Split(' ')[1];
+            //                List<string> scenes = new List<string>();
+            //                foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
+            //                {
+            //                    Print(scene.path);
+            //                    if (scene.enabled && scene.path.Split('/')[2] == requestedScene + ".unity")
+            //                        SceneManager.LoadScene(requestedScene);
+            //                }
+            //            }
+            //            catch
+            //            {
+            //                Print(Error.Failed); break;
+            //            }  
+            //        }
+            //        else
+            //        {
+            //            Print(Error.Construction);
+            //        }
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Print(Error.NotAnDev); break;
+            //    }
+            //case "scenes":
+            //    try
+            //    {
+            //        List<string> scenes = new List<string>();
+            //        foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
+            //        {
+            //            if (scene.enabled)
+            //                Print(scene.path);
+            //        }
+            //    }
+            //    catch
+            //    {
+            //        Print(Error.Failed);
+            //    }
+            //    break;
             case "indexing":
                 if (debugging)
                     for (int i = 0; i < 100; i++)
