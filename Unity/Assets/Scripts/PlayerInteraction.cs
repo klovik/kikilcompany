@@ -14,9 +14,11 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject consolePanel;
     public GameObject sellingStand;
     public GameObject sellParticlePrefab;
+    public GameManager GM;
 
     private void Start()
     {
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         cam = Camera.main;
     }
 
@@ -54,6 +56,11 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     ChangeConsoleState(true);
                 }
+                if(Input.GetKeyDown(interactionKey) && hit.collider.name == "Lever")
+                {
+                    GameObject obpc = GameObject.FindGameObjectWithTag("OBPC");
+                    obpc.GetComponent<OnBoardPC>().UseLever();
+                }
                 itemLabelText.text = hit.collider.gameObject.GetComponent<Label>().text;
             }
             else if(hit.collider.tag == "Selling")
@@ -85,7 +92,7 @@ public class PlayerInteraction : MonoBehaviour
                             Destroy(sellingStand.transform.GetChild(i).gameObject);
                         }
                     }
-                    GameManager.money += price;
+                    GM.money += price;
                     GameObject spp = Instantiate(sellParticlePrefab);
                     spp.transform.parent = sellingStand.transform;
                     spp.transform.localPosition = Vector3.up;

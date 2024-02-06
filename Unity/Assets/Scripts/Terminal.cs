@@ -17,9 +17,13 @@ public class Terminal : MonoBehaviour
     public bool dev = false;
     public bool debugging = false;
     private List<string> lines = new List<string>();
+    public GameManager GM;
+    public string dest = "company";
+    public string toConfirmDest = "";
 
     void Start()
     {
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         player = GameObject.Find("Player");
         if(Debug.isDebugBuild || Application.isEditor)
         {
@@ -36,7 +40,7 @@ public class Terminal : MonoBehaviour
     }
     void SendCommand(string text)
     {
-        switch(text.Split(' ')[0])
+        switch(text.Split(' ')[0].ToLower())
         {
             case "help":
                 Print("Command list:");
@@ -141,6 +145,64 @@ public class Terminal : MonoBehaviour
             //        Print(Error.Failed);
             //    }
             //    break;
+            case "moons":
+            case "moonlist":
+                for(int i = 0; i < GM.moons.Length; i++)
+                {
+                    Print(GM.moons[i]);
+                }
+                break;
+            case "destination":
+            case "dest":
+            case "d":
+                if(text.Split(' ').Length != 2)
+                {
+                    Print(Error.Construction);
+                    break;
+                }
+                else
+                {
+                    bool moonExist = false;
+                    for(int i = 0; i < GM.moons.Length; i++)
+                    {
+                        if (GM.moons[i] == text.Split(' ')[1])
+                        {
+                            moonExist = true; break;
+                        }
+                    }
+                    if(moonExist)
+                    {
+                        Print($"Set destination to {text.Split(' ')[1].ToLower()}? Type 'confirm' to accept.");
+                        toConfirmDest = text.Split(' ')[1].ToLower();
+                        break;
+                    }
+                    else
+                    {
+                        Print("Moon not found!");
+                        break;
+                    }
+                }
+            case "confirm":
+                try
+                {
+                    if(toConfirmDest == "")
+                    {
+                        Print("There is nothing to confirm.");
+                        break;
+                    }
+                    else
+                    {
+                        GM.destination = toConfirmDest;
+                        toConfirmDest = "";
+                        Print($"Destination successfully set to {dest}.");
+                        break;
+                    }
+                }
+                catch
+                {
+                    Print(Error.Failed);
+                    break;
+                }
             case "indexing":
                 if (debugging)
                     for (int i = 0; i < 100; i++)

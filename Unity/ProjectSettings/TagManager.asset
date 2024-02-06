@@ -8,6 +8,7 @@ TagManager:
   - Interactable
   - Selling
   - GM
+  - OBPC
   layers:
   - Default
   - TransparentFX
