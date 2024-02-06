@@ -3,15 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\klovik\\kikil company\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\OnBoardPC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\OnBoardPC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|c:\\users\\klovik\\kikil company\\assets\\scripts\\onboardpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\onboardpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|c:\\users\\klovik\\kikil company\\assets\\scripts\\terminal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\terminal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\terminal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\destroytimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\destroytimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{769D9176-21F6-1D1C-2453-2BCB44E8676C}|Assembly-CSharp.csproj|C:\\Users\\klovik\\kikil company\\assets\\scripts\\selling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,8 +102,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-05T20:31:04.652Z",
+              "IsPinned": true
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -112,7 +125,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\OnBoardPC.cs",
               "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\OnBoardPC.cs",
               "RelativeToolTip": "Assets\\Scripts\\OnBoardPC.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAiwDAAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-06T10:34:47.545Z",
               "EditorCaption": ""
@@ -167,28 +180,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "PlayerInteraction.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerInteraction.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInteraction.cs",
               "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\PlayerInteraction.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerInteraction.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAiwEAAAABYAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAAD0AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-04T15:22:35.678Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
-              "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\GameManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-05T20:31:04.652Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -216,20 +216,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Terminal.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\Terminal.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Terminal.cs",
               "ToolTip": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\Terminal.cs",
               "RelativeToolTip": "Assets\\Scripts\\Terminal.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAqwDcAAAARAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAqwBkAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-05T10:21:49.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-05T10:21:49.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MenuManager.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\MenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuManager.cs",
@@ -237,8 +236,7 @@
               "RelativeToolTip": "Assets\\Scripts\\MenuManager.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAAACcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-05T08:52:02.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-05T08:52:02.831Z"
             },
             {
               "$type": "Document",
@@ -266,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "DestroyTimer.cs",
               "DocumentMoniker": "C:\\Users\\klovik\\kikil company\\Assets\\Scripts\\DestroyTimer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DestroyTimer.cs",

@@ -48,8 +48,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Selling.cs" />
      <Compile Include="Assets\Scripts\Terminal.cs" />
+     <Compile Include="Assets\Scripts\OnBoardPC.cs" />
      <Compile Include="Assets\Scripts\DestroyTimer.cs" />
      <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
      <Compile Include="Assets\Scripts\Label.cs" />
@@ -59,7 +59,6 @@
      <Compile Include="Assets\Scripts\PlayerLook.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\OnBoardPC.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
