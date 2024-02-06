@@ -53,7 +53,7 @@ public class Terminal : MonoBehaviour
                     Print("debugging on/off - Toggle debug mode");
                     Print("scene <name> - Load scene/Get active scene");
                     Print("scenes - Get list of all scenes");
-                    Print("indexing - Count from 0 to 99");
+                    Print("indexing - Count from 0 to 100");
                 }
                 break;
             case "close":
@@ -95,56 +95,6 @@ public class Terminal : MonoBehaviour
                     Print(Error.Failed);
                 }
                 break;
-            //case "scene":
-            //    if(debugging)
-            //    {
-            //        if(text.Split(' ').Length == 1)
-            //        {
-            //            Print(SceneManager.GetActiveScene().path);
-            //        }
-            //        else if (text.Split(' ').Length == 2)
-            //        {
-            //            try
-            //            {
-            //                string requestedScene = text.Split(' ')[1];
-            //                List<string> scenes = new List<string>();
-            //                foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
-            //                {
-            //                    Print(scene.path);
-            //                    if (scene.enabled && scene.path.Split('/')[2] == requestedScene + ".unity")
-            //                        SceneManager.LoadScene(requestedScene);
-            //                }
-            //            }
-            //            catch
-            //            {
-            //                Print(Error.Failed); break;
-            //            }  
-            //        }
-            //        else
-            //        {
-            //            Print(Error.Construction);
-            //        }
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        Print(Error.NotAnDev); break;
-            //    }
-            //case "scenes":
-            //    try
-            //    {
-            //        List<string> scenes = new List<string>();
-            //        foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
-            //        {
-            //            if (scene.enabled)
-            //                Print(scene.path);
-            //        }
-            //    }
-            //    catch
-            //    {
-            //        Print(Error.Failed);
-            //    }
-            //    break;
             case "moons":
             case "moonlist":
                 for(int i = 0; i < GM.moons.Length; i++)
@@ -155,12 +105,12 @@ public class Terminal : MonoBehaviour
             case "destination":
             case "dest":
             case "d":
-                if(text.Split(' ').Length != 2)
+                if(text.Split(' ').Length == 1)
                 {
-                    Print(Error.Construction);
+                    Print($"Current destination is: {GM.destination}");
                     break;
                 }
-                else
+                else if (text.Split(' ').Length == 2)
                 {
                     bool moonExist = false;
                     for(int i = 0; i < GM.moons.Length; i++)
@@ -181,6 +131,11 @@ public class Terminal : MonoBehaviour
                         Print("Moon not found!");
                         break;
                     }
+                }
+                else
+                {
+                    Print(Error.Construction);
+                    break;
                 }
             case "confirm":
                 try
@@ -205,7 +160,7 @@ public class Terminal : MonoBehaviour
                 }
             case "indexing":
                 if (debugging)
-                    for (int i = 0; i < 100; i++)
+                    for (int i = 0; i <= 100; i++)
                         Print($"#{i} .....");
                 else
                     print(Error.NotAnDev);

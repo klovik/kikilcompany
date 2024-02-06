@@ -2370,7 +2370,7 @@ Transform:
   - {fileID: 664993032}
   - {fileID: 543450652862212329}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1593674953 stripped
 Transform:
@@ -2732,7 +2732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7537507021183844476, guid: 6465f0069235e0943a3f7ce9f04eb199, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7537507021183844476, guid: 6465f0069235e0943a3f7ce9f04eb199, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4040,7 +4040,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2304328610732901849, guid: 89698118ca427de43998cbfe80942419, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2304328610732901849, guid: 89698118ca427de43998cbfe80942419, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4095,6 +4095,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2456503734047798736, guid: aad7e6a959d9c574aacb0c29b85ab5cf, type: 3}
+      propertyPath: moons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2456503734047798736, guid: aad7e6a959d9c574aacb0c29b85ab5cf, type: 3}
+      propertyPath: moons.Array.data[0]
+      value: Company
+      objectReference: {fileID: 0}
     - target: {fileID: 2456503734047798739, guid: aad7e6a959d9c574aacb0c29b85ab5cf, type: 3}
       propertyPath: m_RootOrder
       value: 5

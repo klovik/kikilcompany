@@ -35,21 +35,27 @@ public class PlayerMovement : MonoBehaviour
             Vector2 targetVelocity = new Vector2(Input.GetAxis("Horizontal") * targetMovingSpeed, Input.GetAxis("Vertical") * targetMovingSpeed);
             rb.velocity = transform.rotation * new Vector3(targetVelocity.x, rb.velocity.y, targetVelocity.y);
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tilde))
         {
             if (console.activeSelf)
             {
+                print("q1");
                 console.SetActive(false);
                 ChangePlayerMovementAbility(true);
             }
-            else if(pauseMenu.activeSelf)
+            else if (pauseMenu.activeSelf)
             {
+                print("w");
                 pauseMenu.SetActive(false);
                 ChangePlayerMovementAbility(true);
             }
             else
             {
+                print("e");
                 pauseMenu.SetActive(true);
                 ChangePlayerMovementAbility(false);
             }
@@ -71,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     {
         canMove = state;
         gameObject.transform.GetChild(0).GetComponent<PlayerLook>().canMoveMouse = state;
-        rb.freezeRotation = !state;
+        //rb.freezeRotation = !state;
         Cursor.lockState = state ? CursorLockMode.Locked : CursorLockMode.None;
     }
 }
