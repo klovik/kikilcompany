@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638426640244485445
-    m_Hash: 3055815359
+      ticks: 638428322938359864
+    m_Hash: 2831024780
   m_LockFileStatus:
     m_FilePath: C:/Users/klovik/kikil company/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638426640244516430
-    m_Hash: 282848435
+      ticks: 638428322938359864
+    m_Hash: 1815049940
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:

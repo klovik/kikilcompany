@@ -123,6 +123,6 @@ public class PlayerInventory : MonoBehaviour
 
     public enum Item
     {
-        None, Pioneer, ECord, ViperRAM, HPPrinter
+        None, Pioneer, ECord, ViperRAM, HPPrinter, TV
     }
 }
