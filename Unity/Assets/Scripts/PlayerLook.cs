@@ -24,6 +24,7 @@ public class PlayerLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Screen.SetResolution(800, 600, true);
     }
 
     void Update()
