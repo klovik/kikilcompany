@@ -328,6 +328,10 @@ PrefabInstance:
       propertyPath: sellParticlePrefab
       value: 
       objectReference: {fileID: 3676793301648448899, guid: 9e905c222e514f74ca7e34ed62d7d469, type: 3}
+    - target: {fileID: 6025972150217643135, guid: 99cfcd65d04073a49a416169feac23a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5000001
+      objectReference: {fileID: 0}
     - target: {fileID: 7012350304765044876, guid: 99cfcd65d04073a49a416169feac23a2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2754,19 +2758,19 @@ Transform:
   - {fileID: 1483426603}
   - {fileID: 1617606936}
   - {fileID: 383904144}
+  - {fileID: 2024618398}
   - {fileID: 1958308594}
   - {fileID: 2095401616}
   - {fileID: 854749148}
-  - {fileID: 2024618398}
   - {fileID: 2103191869}
   - {fileID: 1655098836}
   - {fileID: 538114351}
+  - {fileID: 543450652862212329}
   - {fileID: 1593674953}
   - {fileID: 485679730}
   - {fileID: 1442266712}
   - {fileID: 536706930}
   - {fileID: 664993032}
-  - {fileID: 543450652862212329}
   - {fileID: 629208410}
   - {fileID: 1054219251}
   - {fileID: 1031719246}
@@ -3722,7 +3726,7 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 1574779447}
-  m_RootOrder: 28
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!65 &2024618399
 BoxCollider:
@@ -4167,7 +4171,7 @@ Transform:
   m_Children:
   - {fileID: 503290191}
   m_Father: {fileID: 1574779447}
-  m_RootOrder: 37
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &832149485041827174
 GameObject:
