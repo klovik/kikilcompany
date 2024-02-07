@@ -18,6 +18,8 @@ public class PlayerInventory : MonoBehaviour
 
     public static Item currentItem;
 
+    public GameObject itemHolder;
+
     void Start()
     {
         UpdateInventorySlotsSizes();
@@ -27,6 +29,7 @@ public class PlayerInventory : MonoBehaviour
     {
         currentItem = inventory[activeSlot];
 
+        RenderItemInHand();
         UpdateInventoryText();
         RenderItemsInHotbar();
 
@@ -69,13 +72,21 @@ public class PlayerInventory : MonoBehaviour
 
     public static int AddItem(Item itemType)
     {
-        for(int i = 0; i < inventory.Length; i++)
+        if (currentItem == Item.None)
         {
-            if (inventory[i] == Item.None)
+            inventory[activeSlot] = itemType; print($"Added {itemType} to slot #{activeSlot}."); return 0;
+        }
+        else
+        {
+            for (int i = 0; i < inventory.Length; i++)
             {
-                inventory[i] = itemType; print($"Added {itemType.ToString()} to slot #{i}"); return 0;
+                if (inventory[i] == Item.None)
+                {
+                    inventory[i] = itemType; print($"Added {itemType} to slot #{i}."); return 0;
+                }
             }
         }
+        print("Couldn't add item");
         return 1;
     }
 
@@ -125,8 +136,32 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-    private void RenderItemInHand()
+    private int RenderItemInHand()
     {
+        GameObject holdingItem = null;
+        if (itemHolder.transform.childCount != 0)
+        {
+            holdingItem = itemHolder.transform.GetChild(0).gameObject;
+        }
+        if (currentItem == Item.None && holdingItem != null)
+        {
+            Destroy(holdingItem);
+            return 0;
+        }
+        if (holdingItem != null && holdingItem.name != currentItem.ToString())
+        {
+            Destroy(holdingItem);
+            GameObject itemPrefab = Resources.Load<GameObject>($"ItemHolder/{currentItem}");
+            GameObject i = Instantiate(itemPrefab, itemHolder.transform);
+            i.GetComponent<Collider>().enabled = false;
+        }
+        else if(holdingItem == null && currentItem != Item.None)
+        {
+            GameObject itemPrefab = Resources.Load<GameObject>($"ItemHolder/{currentItem}");
+            GameObject i = Instantiate(itemPrefab, itemHolder.transform);
+            i.GetComponent<Collider>().enabled = false;
+        }
+        return 1;
     }
 
     public enum Item

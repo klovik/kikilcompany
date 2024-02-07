@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Running")]
     public bool canRun = true;
+    public bool noclip = false;
     public bool IsRunning { get; private set; }
     public float runSpeed = 9;
     public KeyCode runningKey = KeyCode.LeftShift;
@@ -26,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (canMove)
+        if (canMove && !noclip)
         {
             IsRunning = canRun && Input.GetKey(runningKey);
             float targetMovingSpeed = IsRunning ? runSpeed : speed;
@@ -35,6 +36,40 @@ public class PlayerMovement : MonoBehaviour
             Vector2 targetVelocity = new Vector2(Input.GetAxis("Horizontal") * targetMovingSpeed, Input.GetAxis("Vertical") * targetMovingSpeed);
             rb.velocity = transform.rotation * new Vector3(targetVelocity.x, rb.velocity.y, targetVelocity.y);
         }
+        else if(canMove && noclip)
+        {
+            if(Input.GetKey(KeyCode.W))
+            {
+                transform.Translate(Vector3.forward);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Translate(Vector3.back);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Translate(Vector3.left);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Translate(Vector3.right);
+            }
+            if(Input.GetKey(KeyCode.Space))
+            {
+                transform.Translate(Vector3.up);
+            }
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                transform.Translate(Vector3.down);
+            }
+        }
+    }
+
+    void changeNoclipState(bool state)
+    {
+        rb.constraints = state ? RigidbodyConstraints.FreezeAll : RigidbodyConstraints.FreezeRotationZ;
+        noclip = state;
+        GetComponent<CapsuleCollider>().enabled = !state;
     }
 
     void Update()
@@ -43,22 +78,24 @@ public class PlayerMovement : MonoBehaviour
         {
             if (console.activeSelf)
             {
-                print("q1");
                 console.SetActive(false);
                 ChangePlayerMovementAbility(true);
             }
             else if (pauseMenu.activeSelf)
             {
-                print("w");
                 pauseMenu.SetActive(false);
                 ChangePlayerMovementAbility(true);
             }
             else
             {
-                print("e");
                 pauseMenu.SetActive(true);
                 ChangePlayerMovementAbility(false);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.V) && console.GetComponent<Terminal>().debugging)
+        {
+            changeNoclipState(!noclip);
         }
     }
 

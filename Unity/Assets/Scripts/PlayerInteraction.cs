@@ -36,7 +36,6 @@ public class PlayerInteraction : MonoBehaviour
             GameObject _Item = Instantiate(item, transform.position, new Quaternion(0,0,0,0));
             gameObject.GetComponent<PlayerInventory>().RemoveItemAtIndex(PlayerInventory.activeSlot);
         }
-        print(PlayerInventory.currentItem);
 
         //input hint text update
         if (PlayerInventory.currentItem != PlayerInventory.Item.None)
@@ -53,7 +52,7 @@ public class PlayerInteraction : MonoBehaviour
             case PlayerInventory.Item.HPPrinter:
                 break;
             case PlayerInventory.Item.ElectroEbator:
-                inputHintText.text += "[LMB] Use";
+                inputHintText.text += "[LMB] Use\n";
                 break;
         }
 
@@ -86,6 +85,10 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     GameObject obpc = GameObject.FindGameObjectWithTag("OBPC");
                     obpc.GetComponent<OnBoardPC>().UseLever();
+                }
+                if(Input.GetKeyDown(interactionKey) && hit.collider.name == "DNS")
+                {
+                    hit.collider.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                 }
                 itemLabelText.text = hit.collider.gameObject.GetComponent<Label>().text;
             }
