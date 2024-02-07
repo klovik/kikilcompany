@@ -837,7 +837,7 @@ Transform:
   - {fileID: 755077592}
   - {fileID: 1439621867}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &298119082
 GameObject:
@@ -1213,7 +1213,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 2813632815303007055}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -3590,7 +3590,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 2813632815303007055}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -3690,7 +3690,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 2813632815303007055}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4492,7 +4492,7 @@ Transform:
   - {fileID: 399397848}
   - {fileID: 1620707751}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &832149484402268289
 GameObject:
@@ -4574,11 +4574,6 @@ MonoBehaviour:
   rightMonitor: {fileID: 271582191}
   lever: {fileID: 1748542445}
   GM: {fileID: 739738036}
---- !u!20 &2813632815303007055 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 5081792841361090070, guid: 99cfcd65d04073a49a416169feac23a2, type: 3}
-  m_PrefabInstance: {fileID: 7028482435263757657}
-  m_PrefabAsset: {fileID: 0}
 --- !u!33 &3010172807178880309
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4636,7 +4631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7537507021183844476, guid: 6465f0069235e0943a3f7ce9f04eb199, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7537507021183844476, guid: 6465f0069235e0943a3f7ce9f04eb199, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4799,6 +4794,10 @@ PrefabInstance:
     - target: {fileID: 6025972150217643135, guid: 99cfcd65d04073a49a416169feac23a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555842537812714908, guid: 99cfcd65d04073a49a416169feac23a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 7028482435051722238, guid: 99cfcd65d04073a49a416169feac23a2, type: 3}
       propertyPath: GM

@@ -26,6 +26,9 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
+        if (!GetComponent<PlayerMovement>().noclip) itemLabelText.color = Color.white;
+        else itemLabelText.color = Color.red;
+
         inputHintText.text = "";
         RaycastHit hit;
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -136,6 +139,10 @@ public class PlayerInteraction : MonoBehaviour
         }
         Debug.DrawRay(cam.transform.position, ray.direction * 2, Color.yellow);
 
+        if(GetComponent<PlayerMovement>().noclip)
+        {
+            itemLabelText.text = "NOCLIP";
+        }
 
     }
 
