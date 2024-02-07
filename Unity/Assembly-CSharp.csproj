@@ -55,13 +55,13 @@
      <Compile Include="Assets\Scripts\Label.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\Scripts\PlayerInventory.cs" />
+     <Compile Include="Assets\Scripts\Enviroment\MetalShitTriggerZone.cs" />
      <Compile Include="Assets\Scripts\DontDestroy.cs" />
      <Compile Include="Assets\Scripts\PlayerLook.cs" />
+     <Compile Include="Assets\Scripts\Enviroment\MetalShit.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\MetalShit.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\MetalShitTriggerZone.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
