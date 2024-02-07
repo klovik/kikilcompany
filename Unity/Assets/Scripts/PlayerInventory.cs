@@ -16,6 +16,8 @@ public class PlayerInventory : MonoBehaviour
 
     public Text inventoryText;
 
+    public static Item currentItem;
+
     void Start()
     {
         UpdateInventorySlotsSizes();
@@ -23,6 +25,8 @@ public class PlayerInventory : MonoBehaviour
 
     private void Update()
     {
+        currentItem = inventory[activeSlot];
+
         UpdateInventoryText();
         RenderItemsInHotbar();
 
@@ -121,8 +125,12 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    private void RenderItemInHand()
+    {
+    }
+
     public enum Item
     {
-        None, Pioneer, ECord, ViperRAM, HPPrinter, TV
+        None, Pioneer, ECord, ViperRAM, HPPrinter, TV, ElectroEbator
     }
 }

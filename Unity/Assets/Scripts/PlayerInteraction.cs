@@ -16,6 +16,8 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject sellParticlePrefab;
     public GameManager GM;
 
+    public Text inputHintText;
+
     private void Start()
     {
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -24,7 +26,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
-        //if (!isLocalPlayer) return;
+        inputHintText.text = "";
         RaycastHit hit;
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
@@ -34,14 +36,37 @@ public class PlayerInteraction : MonoBehaviour
             GameObject _Item = Instantiate(item, transform.position, new Quaternion(0,0,0,0));
             gameObject.GetComponent<PlayerInventory>().RemoveItemAtIndex(PlayerInventory.activeSlot);
         }
+        print(PlayerInventory.currentItem);
+
+        //input hint text update
+        if (PlayerInventory.currentItem != PlayerInventory.Item.None)
+        {
+            inputHintText.text += $"[G] Drop\n";
+        }
+        switch (PlayerInventory.currentItem)
+        {
+            case PlayerInventory.Item.None:
+            case PlayerInventory.Item.Pioneer:
+            case PlayerInventory.Item.ECord:
+            case PlayerInventory.Item.TV:
+            case PlayerInventory.Item.ViperRAM:
+            case PlayerInventory.Item.HPPrinter:
+                break;
+            case PlayerInventory.Item.ElectroEbator:
+                inputHintText.text += "[LMB] Use";
+                break;
+        }
 
         if (Physics.Raycast(ray, out hit, rayLength))
         {
             if(hit.collider.tag == "Item")
             {
+                inputHintText.text += "[E] Pickup\n";
                 string itemName = hit.collider.gameObject.GetComponent<Item>().itemName;
                 string itemPrice = hit.collider.gameObject.GetComponent<Item>().price.ToString();
-                itemLabelText.text = $"[{itemPrice}] {itemName}";
+                if(hit.collider.GetComponent<Item>().priceless) itemLabelText.text = $"{itemName}";
+                else itemLabelText.text = $"[{itemPrice}] {itemName}";
+
                 if (Input.GetKeyDown(interactionKey))
                 {
                     PlayerInventory.Item itemType;
@@ -52,6 +77,7 @@ public class PlayerInteraction : MonoBehaviour
             }
             else if(hit.collider.tag == "Interactable")
             {
+                inputHintText.text += "[E] Interact\n";
                 if (Input.GetKeyDown(interactionKey) && hit.collider.name == "Terminal")
                 {
                     ChangeConsoleState(true);
@@ -66,6 +92,7 @@ public class PlayerInteraction : MonoBehaviour
             else if(hit.collider.tag == "Selling")
             {
                 string labelText = hit.collider.gameObject.GetComponent<Label>().text;
+                inputHintText.text += "[E] Sell Item\n";
                 int price = 0;
                 for(int i = 0; i < hit.collider.transform.childCount; i++)
                 {
@@ -73,9 +100,9 @@ public class PlayerInteraction : MonoBehaviour
                         price += hit.collider.transform.GetChild(i).GetComponent<Item>().price;
                 }
                 itemLabelText.text = $"{labelText} [{price}]";
-                if (Input.GetKeyDown(interactionKey) && PlayerInventory.inventory[PlayerInventory.activeSlot] != PlayerInventory.Item.None)
+                if (Input.GetKeyDown(interactionKey) && PlayerInventory.currentItem != PlayerInventory.Item.None)
                 {
-                    PlayerInventory.Item activeItem = PlayerInventory.inventory[PlayerInventory.activeSlot];
+                    PlayerInventory.Item activeItem = PlayerInventory.currentItem;
                     gameObject.GetComponent<PlayerInventory>().RemoveItemAtIndex(PlayerInventory.activeSlot);
                     GameObject dropPrefab = Resources.Load<GameObject>($"Trash/{activeItem}");
                     GameObject dropped = Instantiate(dropPrefab);
@@ -83,7 +110,7 @@ public class PlayerInteraction : MonoBehaviour
                     dropped.transform.parent = sellingStand.transform;
                     dropped.transform.localPosition = new Vector3(Random.Range(-0.66f, 0.3f), 1f, Random.Range(-1.7f, 1.7f));
                 }
-                else if(Input.GetKeyDown(interactionKey) && PlayerInventory.inventory[PlayerInventory.activeSlot] == PlayerInventory.Item.None)
+                else if(Input.GetKeyDown(interactionKey) && PlayerInventory.currentItem == PlayerInventory.Item.None)
                 {
                     for(int i = 0; i < sellingStand.transform.childCount; i++)
                     {
@@ -102,8 +129,11 @@ public class PlayerInteraction : MonoBehaviour
         else
         {
             itemLabelText.text = "";
+            inputHintText.text = $"";
         }
         Debug.DrawRay(cam.transform.position, ray.direction * 2, Color.yellow);
+
+
     }
 
     public void ChangeConsoleState(bool state)
