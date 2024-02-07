@@ -9,6 +9,7 @@ TagManager:
   - Selling
   - GM
   - OBPC
+  - AIFollowPoint
   layers:
   - Default
   - TransparentFX

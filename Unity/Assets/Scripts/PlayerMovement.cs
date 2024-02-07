@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     {
         canMove = state;
         gameObject.transform.GetChild(0).GetComponent<PlayerLook>().canMoveMouse = state;
-        //rb.freezeRotation = !state;
+        rb.freezeRotation = !state;
         Cursor.lockState = state ? CursorLockMode.Locked : CursorLockMode.None;
     }
 }
