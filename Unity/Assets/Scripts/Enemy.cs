@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
@@ -14,8 +15,10 @@ public class Enemy : MonoBehaviour
     public List<Vector3> followPoints;
     public float visionDistance = 10f;
     public float minDistanceToFollowPoint = 2.5f;
-    public GameObject FPVision;
     public GameObject currentDestination;
+    public float visionLosingTimer = 3f;
+    bool playerVisible = false;
+    int currentFPIndex = 0;
 
     private void Start()
     {
@@ -31,7 +34,6 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        UpdateDebugVisionAreas();
         currentDestination.transform.position = agent.destination;
         if (Vector3.Distance(transform.position, currentDestination.transform.position) < 0.3f) currentDestination.SetActive(false);
         else currentDestination.SetActive(true);
@@ -42,37 +44,35 @@ public class Enemy : MonoBehaviour
             {
                 case AIType.None: break;
                 case AIType.Normal:
-                    //if distance to player <= visionDistance
-                    if (Vector3.Distance(player.transform.position, transform.position) <= visionDistance)
+                    if (playerVisible)
                     {
                         agent.destination = player.transform.position;
                     }
-                    else //if player is far
+                    else
                     {
-                        Vector3 closestFollowPoint = followPoints[0];
-                        for (int i = 0; i < followPoints.Count; i++)
-                        {
-                            //if iterating FP closer than `closestFollowPoint`
-                            //and iterating FP is not too close, then clstsFP = iterFP
-                            float iterFPDist = Vector3.Distance(transform.position, followPoints[i]);
-                            float closestFPDist = Vector3.Distance(transform.position, closestFollowPoint);
-                            if (iterFPDist < closestFPDist && iterFPDist >= minDistanceToFollowPoint) closestFollowPoint = followPoints[i];
-                        }
-                        agent.destination = closestFollowPoint;
+                        DoFollowPoints();
                     }
                     break;
             }
         }
     }
 
-    public void UpdateDebugVisionAreas()
+    private void DoFollowPoints()
     {
-        if (FPVision != null)
+        float distToCurrent = Vector3.Distance(transform.position, followPoints[currentFPIndex]);
+        if(distToCurrent < 1f)
         {
-            FPVision.transform.localScale = new Vector3(visionDistance, 0.1f, visionDistance);
+            if(currentFPIndex == followPoints.Count - 1)
+            {
+                currentFPIndex = 0;
+            }
+            else
+            {
+                currentFPIndex++;
+            }
         }
+        agent.destination = followPoints[currentFPIndex];
     }
-
     public enum AIType
     {
         None, Normal

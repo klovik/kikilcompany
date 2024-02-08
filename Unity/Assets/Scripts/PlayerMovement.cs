@@ -80,16 +80,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 console.SetActive(false);
                 ChangePlayerMovementAbility(true);
+                Time.timeScale = 1;
             }
             else if (pauseMenu.activeSelf)
             {
                 pauseMenu.SetActive(false);
                 ChangePlayerMovementAbility(true);
+                Time.timeScale = 1;
             }
             else
             {
                 pauseMenu.SetActive(true);
                 ChangePlayerMovementAbility(false);
+                Time.timeScale = 0;
             }
         }
 
@@ -102,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
     public void ClosePauseMenu()
     {
         pauseMenu.SetActive(false);
+        Time.timeScale = 1;
         ChangePlayerMovementAbility(true);
     }
 
