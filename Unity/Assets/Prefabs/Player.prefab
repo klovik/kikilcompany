@@ -959,7 +959,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5555935716258883891}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: GotoMainMenu
         m_Mode: 1
@@ -1947,7 +1947,6 @@ GameObject:
   - component: {fileID: 8195367506205824253}
   - component: {fileID: 4941294408663303991}
   - component: {fileID: 598593745576629919}
-  - component: {fileID: 5555935716258883891}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -2040,26 +2039,6 @@ MonoBehaviour:
   sellParticlePrefab: {fileID: 3676793301648448899, guid: 9e905c222e514f74ca7e34ed62d7d469, type: 3}
   GM: {fileID: 0}
   inputHintText: {fileID: 3573265468948508905}
---- !u!114 &5555935716258883891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4347776613382635795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85617149ede6d1c4d974abd4574277ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  canMove: 1
-  canRun: 1
-  noclip: 0
-  runSpeed: 9
-  runningKey: 304
-  console: {fileID: 2589607492162875940}
-  pauseMenu: {fileID: 2534098398279239975}
 --- !u!1 &4634316133606363787
 GameObject:
   m_ObjectHideFlags: 0
@@ -2392,7 +2371,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5555935716258883891}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: ClosePauseMenu
         m_Mode: 1

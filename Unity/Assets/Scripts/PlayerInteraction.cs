@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using Fragsurf.Movement;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -26,8 +27,8 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
-        if (!GetComponent<PlayerMovement>().noclip) itemLabelText.color = Color.white;
-        else itemLabelText.color = Color.red;
+        //if (!GetComponent<PlayerMovement>().noclip) itemLabelText.color = Color.white;
+        //else itemLabelText.color = Color.red;
 
         inputHintText.text = "";
         RaycastHit hit;
@@ -138,17 +139,10 @@ public class PlayerInteraction : MonoBehaviour
             inputHintText.text = $"";
         }
         Debug.DrawRay(cam.transform.position, ray.direction * 2, Color.yellow);
-
-        if(GetComponent<PlayerMovement>().noclip)
-        {
-            itemLabelText.text = "NOCLIP";
-        }
-
     }
 
     public void ChangeConsoleState(bool state)
     {
         consolePanel.SetActive(state);
-        gameObject.GetComponent<PlayerMovement>().ChangePlayerMovementAbility(!state);
     }
 }

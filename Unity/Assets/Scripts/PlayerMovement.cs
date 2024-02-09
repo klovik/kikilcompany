@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode runningKey = KeyCode.LeftShift;
     public GameObject console;
     public GameObject pauseMenu;
+    public bool isGrounded = false;
 
     Rigidbody rb;
     public List<System.Func<float>> speedOverrides = new List<System.Func<float>>();
@@ -23,6 +24,16 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Ground")) isGrounded = true;
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Ground")) isGrounded = false;
     }
 
     void FixedUpdate()
@@ -99,6 +110,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V) && console.GetComponent<Terminal>().debugging)
         {
             changeNoclipState(!noclip);
+        }
+
+        if(Input.GetKey(KeyCode.Space) && isGrounded)
+        {
+            rb.velocity += Vector3.up;
         }
     }
 

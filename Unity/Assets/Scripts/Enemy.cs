@@ -44,7 +44,8 @@ public class Enemy : MonoBehaviour
             {
                 case AIType.None: break;
                 case AIType.Normal:
-                    if (playerVisible)
+                    Debug.DrawRay(transform.position, player.transform.position, Color.red);
+                    if (Vector3.Distance(transform.position,player.transform.position) < visionDistance)
                     {
                         agent.destination = player.transform.position;
                     }

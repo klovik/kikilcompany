@@ -48,18 +48,33 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Extensions\IntExtensions.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Extensions\VectorExtensions.cs" />
      <Compile Include="Assets\Scripts\Terminal.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\TraceUtil\Tracer.cs" />
      <Compile Include="Assets\Scripts\OnBoardPC.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\TraceUtil\Trace.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Movement\SurfPhysics.cs" />
      <Compile Include="Assets\Scripts\DestroyTimer.cs" />
      <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
      <Compile Include="Assets\Scripts\Label.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Ladder.cs" />
      <Compile Include="Assets\Scripts\PlayerInventory.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\PlayerAiming.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Movement\MoveData.cs" />
      <Compile Include="Assets\Scripts\Enviroment\MetalShitTriggerZone.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Movement\SurfController.cs" />
      <Compile Include="Assets\Scripts\DontDestroy.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Movement\SurfCharacter.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Water.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Movement\ISurfControllable.cs" />
      <Compile Include="Assets\Scripts\PlayerLook.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Movement\InputButtons.cs" />
      <Compile Include="Assets\Scripts\Enviroment\MetalShit.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Movement\MovementConfig.cs" />
+     <Compile Include="Assets\Thirdparty\UnitySourceMovement\CameraWaterCheck.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
  <Reference Include="UnityEngine">
