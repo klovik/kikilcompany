@@ -55,60 +55,60 @@ public class PlayerInteraction : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, rayLength))
         {
-            if(hit.collider.tag == "Item")
+            switch(hit.collider.tag)
             {
-                inputHintText.text += "[E] Pickup\n";
-                string itemName = hit.collider.gameObject.GetComponent<Item>().itemName;
-                string itemPrice = hit.collider.gameObject.GetComponent<Item>().price.ToString();
-                if(hit.collider.GetComponent<Item>().priceless) itemLabelText.text = $"{itemName}";
-                else itemLabelText.text = $"[{itemPrice}] {itemName}";
+                case "Item":
+                    inputHintText.text += "[E] Pickup\n";
+                    string itemName = hit.collider.gameObject.GetComponent<Item>().itemName;
+                    string itemPrice = hit.collider.gameObject.GetComponent<Item>().price.ToString();
+                    if (hit.collider.GetComponent<Item>().priceless) itemLabelText.text = $"{itemName}";
+                    else itemLabelText.text = $"[{itemPrice}] {itemName}";
 
-                if (Input.GetKeyDown(KeyBindings.use))
-                {
-                    PlayerInventory.Item itemType;
-                    itemType = hit.collider.gameObject.GetComponent<Item>().itemType;
-                    int res = PlayerInventory.AddItem(itemType);
-                    if (res == 0) Destroy(hit.collider.gameObject);
-                }
-            }
-            else if(hit.collider.tag == "Interactable")
-            {
-                inputHintText.text += "[E] Interact\n";
-                if(Input.GetKeyDown(KeyBindings.use))
-                {
-                    //action with interactables
-                    switch (hit.collider.name)
+                    if (Input.GetKeyDown(KeyBindings.use))
                     {
-                        case "Terminal":
-                            ConsoleHandler.Open(); break;
-                        case "Lever":
-                            GameObject obpc = GameObject.FindGameObjectWithTag("OBPC");
-                            obpc.GetComponent<OnBoardPC>().UseLever();
-                            break;
-                        case "DNS":
-                            hit.collider.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-                            break;
+                        PlayerInventory.Item itemType;
+                        itemType = hit.collider.gameObject.GetComponent<Item>().itemType;
+                        int res = PlayerInventory.AddItem(itemType);
+                        if (res == 0) Destroy(hit.collider.gameObject);
                     }
-                }
-                itemLabelText.text = hit.collider.gameObject.GetComponent<Label>().text;
-            }
-            else if(hit.collider.tag == "Selling")
-            {
-                string labelText = hit.collider.gameObject.GetComponent<Label>().text;
-                inputHintText.text += "[E] Sell Item\n";
-                //update labelText with total price of selling items;
-                itemLabelText.text = $"{labelText} [{GetTotalSellingPrice()}]";
+                    break;
+                case "Interactable":
+                    inputHintText.text += "[E] Interact\n";
+                    if (Input.GetKeyDown(KeyBindings.use))
+                    {
+                        //action with interactables
+                        switch (hit.collider.name)
+                        {
+                            case "Terminal":
+                                ConsoleHandler.Open(); break;
+                            case "Lever":
+                                GameObject obpc = GameObject.FindGameObjectWithTag("OBPC");
+                                obpc.GetComponent<OnBoardPC>().UseLever();
+                                break;
+                            case "DNS":
+                                hit.collider.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                                break;
+                        }
+                    }
+                    itemLabelText.text = hit.collider.gameObject.GetComponent<Label>().text;
+                    break;
+                case "Selling":
+                    string labelText = hit.collider.gameObject.GetComponent<Label>().text;
+                    inputHintText.text += "[E] Sell Item\n";
+                    //update labelText with total price of selling items;
+                    itemLabelText.text = $"{labelText} [{GetTotalSellingPrice()}]";
 
-                //if holding something
-                if (Input.GetKeyDown(KeyBindings.use) && PlayerInventory.currentItem != PlayerInventory.Item.None)
-                {
-                    SellCurrentItem();
-                }
-                //if holding nothing
-                else if(Input.GetKeyDown(KeyBindings.use) && PlayerInventory.currentItem == PlayerInventory.Item.None)
-                {
-                    SellEverything();
-                }
+                    //if holding something
+                    if (Input.GetKeyDown(KeyBindings.use) && PlayerInventory.currentItem != PlayerInventory.Item.None)
+                    {
+                        SellCurrentItem();
+                    }
+                    //if holding nothing
+                    else if (Input.GetKeyDown(KeyBindings.use) && PlayerInventory.currentItem == PlayerInventory.Item.None)
+                    {
+                        SellEverything();
+                    }
+                    break;
             }
         }
         else
@@ -131,17 +131,14 @@ public class PlayerInteraction : MonoBehaviour
     }
     private void SellEverything()
     {
-        for (int i = 0; i < sellingStand.transform.childCount; i++)
+        if(GetTotalSellingPrice() != 0)
         {
-            if (sellingStand.transform.GetChild(i).name != "Model")
-            {
-                Destroy(sellingStand.transform.GetChild(i).gameObject);
-            }
+            StartCoroutine(sellItems());
+            //old particle animation
+            //GameObject spp = Instantiate(sellParticlePrefab);
+            //spp.transform.parent = sellingStand.transform;
+            //spp.transform.localPosition = Vector3.up;
         }
-        GameManager.money += GetTotalSellingPrice();
-        GameObject spp = Instantiate(sellParticlePrefab);
-        spp.transform.parent = sellingStand.transform;
-        spp.transform.localPosition = Vector3.up;
     }
     private int GetTotalSellingPrice()
     {
@@ -159,5 +156,41 @@ public class PlayerInteraction : MonoBehaviour
         GameObject item = Resources.Load<GameObject>($"Trash/{PlayerInventory.inventory[PlayerInventory.activeSlot]}");
         GameObject _Item = Instantiate(item, transform.position, new Quaternion(0, 0, 0, 0));
         gameObject.GetComponent<PlayerInventory>().RemoveItemAtIndex(PlayerInventory.activeSlot);
+    }
+
+    IEnumerator sellItems()
+    {
+        GameObject gate = GameObject.Find("SellStandClosingShit");
+        Text sellText = GameObject.Find("SellText").GetComponent<Text>();
+
+        gate.GetComponent<Animator>().Play("Closing");
+        yield return new WaitForSeconds(3);
+        int sellPrice = GetTotalSellingPrice();
+
+        //add money
+        GameManager.money += sellPrice;
+
+        //destroy all items in sellstand
+        for (int i = 0; i < sellingStand.transform.childCount; i++)
+        {
+            if (sellingStand.transform.GetChild(i).name != "Model")
+            {
+                Destroy(sellingStand.transform.GetChild(i).gameObject);
+            }
+        }
+        gate.GetComponent<Animator>().Play("Opening");
+        sellText.text = $"+${sellPrice}";
+
+        while (sellText.color.a != 1)
+        {
+            sellText.color += new Color(0, 0, 0, 0.2f);
+            yield return new WaitForSeconds(0.3f);
+        }
+        yield return new WaitForSeconds(2);
+        while (sellText.color.a != 0)
+        {
+            sellText.color -= new Color(0, 0, 0, 0.2f);
+            yield return new WaitForSeconds(0.3f);
+        }
     }
 }
