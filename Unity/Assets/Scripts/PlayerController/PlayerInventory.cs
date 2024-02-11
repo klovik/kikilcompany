@@ -34,7 +34,7 @@ public class PlayerInventory : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J))
         {
-            AddItem(Item.HPPrinter);
+            if(AddItem(Item.HPPrinter) == 1) print("Failed to add an item");
         }
         
         if (inventoryMenuOpened)
