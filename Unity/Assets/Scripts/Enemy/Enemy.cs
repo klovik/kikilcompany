@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,7 +16,7 @@ public class Enemy : MonoBehaviour
     public float minDistanceToFollowPoint = 2.5f;
     public GameObject currentDestination;
     public float visionLosingTimer = 3f;
-    bool playerVisible = false;
+    //bool playerVisible = false;
     int currentFPIndex = 0;
 
     private void Start()
@@ -37,9 +36,6 @@ public class Enemy : MonoBehaviour
         currentDestination.transform.position = agent.destination;
         if (Vector3.Distance(transform.position, currentDestination.transform.position) < 0.3f) currentDestination.SetActive(false);
         else currentDestination.SetActive(true);
-
-        if (!player.GetComponent<PlayerMovement>().pauseMenu.activeSelf)
-        {
             switch (aiType)
             {
                 case AIType.None: break;
@@ -55,9 +51,7 @@ public class Enemy : MonoBehaviour
                     }
                     break;
             }
-        }
     }
-
     private void DoFollowPoints()
     {
         float distToCurrent = Vector3.Distance(transform.position, followPoints[currentFPIndex]);

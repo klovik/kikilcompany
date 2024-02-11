@@ -1,0 +1,14 @@
+PlayerController/PlayerInteraction.cs:
+	E - Use
+	G - Drop Item
+
+PlayerController/PlayerInventory.cs:
+	1 - slot #1
+	2 - slot #2
+	3 - slot #3
+
+UI/PauseMenuHandler
+	Escape - Close Console/Toggle Pause
+
+
+

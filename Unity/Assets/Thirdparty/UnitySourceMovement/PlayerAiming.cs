@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Fragsurf.Movement;
+using UnityEngine;
 
 public class PlayerAiming : MonoBehaviour
 {
@@ -46,12 +47,15 @@ public class PlayerAiming : MonoBehaviour
 		DecayPunchAngle();
 
 		// Input
-		float xMovement = Input.GetAxisRaw("Mouse X") * horizontalSensitivity * sensitivityMultiplier;
-		float yMovement = -Input.GetAxisRaw("Mouse Y") * verticalSensitivity  * sensitivityMultiplier;
+		if(SurfCharacter.movementEnabled)
+		{
+            float xMovement = Input.GetAxisRaw("Mouse X") * horizontalSensitivity * sensitivityMultiplier;
+            float yMovement = -Input.GetAxisRaw("Mouse Y") * verticalSensitivity * sensitivityMultiplier;
+			// Calculate real rotation from input
+            realRotation = new Vector3(Mathf.Clamp(realRotation.x + yMovement, minYRotation, maxYRotation), realRotation.y + xMovement, realRotation.z);
+            realRotation.z = Mathf.Lerp(realRotation.z, 0f, Time.deltaTime * 3f);
+        }
 
-		// Calculate real rotation from input
-		realRotation   = new Vector3(Mathf.Clamp(realRotation.x + yMovement, minYRotation, maxYRotation), realRotation.y + xMovement, realRotation.z);
-		realRotation.z = Mathf.Lerp(realRotation.z, 0f, Time.deltaTime * 3f);
 
 		//Apply real rotation to body
 		bodyTransform.eulerAngles = Vector3.Scale(realRotation, new Vector3(0f, 1f, 0f));

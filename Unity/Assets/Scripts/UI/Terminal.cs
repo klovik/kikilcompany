@@ -57,7 +57,7 @@ public class Terminal : MonoBehaviour
                 }
                 break;
             case "close":
-                player.GetComponent<PlayerInteraction>().ChangeConsoleState(false);
+                ConsoleHandler.Close();
                 Print("Closing..");
                 break;
             case "clear":
@@ -97,9 +97,9 @@ public class Terminal : MonoBehaviour
                 break;
             case "moons":
             case "moonlist":
-                for(int i = 0; i < GM.moons.Length; i++)
+                for(int i = 0; i < GameManager.moons.Length; i++)
                 {
-                    Print(GM.moons[i]);
+                    Print(GameManager.moons[i]);
                 }
                 break;
             case "destination":
@@ -107,15 +107,15 @@ public class Terminal : MonoBehaviour
             case "d":
                 if(text.Split(' ').Length == 1)
                 {
-                    Print($"Current destination is: {GM.destination}");
+                    Print($"Current destination is: {GameManager.destination}");
                     break;
                 }
                 else if (text.Split(' ').Length == 2)
                 {
                     bool moonExist = false;
-                    for(int i = 0; i < GM.moons.Length; i++)
+                    for(int i = 0; i < GameManager.moons.Length; i++)
                     {
-                        if (GM.moons[i] == text.Split(' ')[1])
+                        if (GameManager.moons[i] == text.Split(' ')[1])
                         {
                             moonExist = true; break;
                         }
@@ -147,7 +147,7 @@ public class Terminal : MonoBehaviour
                     }
                     else
                     {
-                        GM.destination = toConfirmDest;
+                        GameManager.destination = toConfirmDest;
                         toConfirmDest = "";
                         Print($"Destination successfully set to {dest}.");
                         break;
@@ -214,6 +214,4 @@ public class Terminal : MonoBehaviour
     {
         None, Unknown, Construction, NotAnDev, Failed
     }
-
-    public void CloseConsole() => player.GetComponent<PlayerInteraction>().ChangeConsoleState(false);
 }

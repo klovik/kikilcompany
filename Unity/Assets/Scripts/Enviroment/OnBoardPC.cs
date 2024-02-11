@@ -9,16 +9,10 @@ public class OnBoardPC : MonoBehaviour
 {
     public Text leftMonitor, middleMonitor, rightMonitor;
     public GameObject lever;
-    public GameManager GM;
-
-    void Start()
-    {
-        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
-    }
 
     void Update()
     {
-        switch(GM.gameState)
+        switch(GameManager.gameState)
         {
             case GameManager.GameState.None:
                 break;
@@ -30,15 +24,15 @@ public class OnBoardPC : MonoBehaviour
                 break;
         }
 
-        leftMonitor.text = $"Destination: {GM.destination}\nLocation: {GM.currentLocation}";
-        middleMonitor.text = $"Money: ${GM.money}";
-        rightMonitor.text = $"GameState: {GM.gameState}";
+        leftMonitor.text = $"Destination: {GameManager.destination}\nLocation: {GameManager.currentLocation}";
+        middleMonitor.text = $"Money: ${GameManager.money}";
+        rightMonitor.text = $"GameState: {GameManager.gameState}";
     }
 
     public void UseLever()
     {
         lever.transform.GetChild(1).GetComponent<Animator>().Play("UseLever");
-        if(GM.gameState == GameManager.GameState.Selecting)
+        if(GameManager.gameState == GameManager.GameState.Selecting)
         {
             StartCoroutine(StartShip());
         }
@@ -47,12 +41,12 @@ public class OnBoardPC : MonoBehaviour
     IEnumerator StartShip()
     {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(GM.destination);
+        SceneManager.LoadScene(GameManager.destination);
     }
 
     void LandShip()
     {
-        string destination = GM.destination;
+        string destination = GameManager.destination;
         SceneManager.LoadScene(destination);
     }
 

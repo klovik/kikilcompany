@@ -17,6 +17,8 @@ namespace Fragsurf.Movement {
         }
 
         ///// Fields /////
+        [Header("Main")]
+        public static bool movementEnabled = true;
 
         [Header("Physics Settings")]
         public Vector3 colliderSize = new Vector3 (1f, 2f, 1f);
@@ -221,8 +223,8 @@ namespace Fragsurf.Movement {
 
 
             //UpdateTestBinds ();
-            UpdateMoveData ();
-            
+            if(movementEnabled) UpdateMoveData();
+
             // Previous movement code
             Vector3 positionalMovement = transform.position - prevPosition;
             transform.position = prevPosition;

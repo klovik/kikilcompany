@@ -51,11 +51,11 @@ public class PlayerInventory : MonoBehaviour
             UpdateInventorySlotsSizes();
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyBindings.slot1))
             activeSlot = 0;
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyBindings.slot2))
             activeSlot = 1;
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyBindings.slot3))
             activeSlot = 2;
     }
 

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int money = 200;
-    public GameState gameState = GameState.Selecting;
-    public string[] moons;
-    public string destination;
-    public string currentLocation;
+    public static int money = 200;
+    public static GameState gameState = GameState.Selecting;
+    public static string[] moons;
+    public static string destination;
+    public static string currentLocation;
 
     public enum GameState
     {
