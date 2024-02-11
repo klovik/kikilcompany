@@ -81,6 +81,7 @@
      <Compile Include="Assets\Thirdparty\UnitySourceMovement\CameraWaterCheck.cs" />
      <Compile Include="Assets\Scripts\Utility\Item.cs" />
      <Compile Include="Assets\Scripts\Deprecated\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Misc\PocoHolding.cs" />
      <None Include="Assets\Scripts\PlayerController\binds.txt" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

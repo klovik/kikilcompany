@@ -162,8 +162,10 @@ public class PlayerInteraction : MonoBehaviour
     {
         GameObject gate = GameObject.Find("SellStandClosingShit");
         Text sellText = GameObject.Find("SellText").GetComponent<Text>();
+        AudioSource audio = GameObject.Find("SellAudio").GetComponent<AudioSource>();
 
         gate.GetComponent<Animator>().Play("Closing");
+        audio.Play();
         yield return new WaitForSeconds(3);
         int sellPrice = GetTotalSellingPrice();
 
