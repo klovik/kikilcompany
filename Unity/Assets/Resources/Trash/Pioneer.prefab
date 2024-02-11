@@ -1696,6 +1696,7 @@ GameObject:
   - component: {fileID: 9167771155685311663}
   - component: {fileID: 9167771155685311660}
   - component: {fileID: 9167771155685311662}
+  - component: {fileID: 2675587714289106352}
   m_Layer: 0
   m_Name: Pioneer
   m_TagString: Item
@@ -1765,6 +1766,24 @@ MonoBehaviour:
   heavy: 0
   weight: 1
   itemType: 1
+--- !u!114 &2675587714289106352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8357307184194730491}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &8397460203300462800
 GameObject:
   m_ObjectHideFlags: 0
