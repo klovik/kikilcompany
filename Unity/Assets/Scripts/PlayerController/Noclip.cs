@@ -15,11 +15,11 @@ public class Noclip : MonoBehaviour
     private void Start()
     {
         sc = GetComponent<SurfCharacter>();
-        noclipText = transform.GetChild(0).GetChild(0).GetChild(0).Find("NoclipText").GetComponent<Text>();
+        noclipText = GameObject.Find("NoclipText").GetComponent<Text>();
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyBindings.noclip))
+        if(Input.GetKeyDown(KeyBindings.noclip) && GameManager.developer)
         {
             ChangeNoclipState(!noclipping);
         }

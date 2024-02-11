@@ -9,6 +9,12 @@ public class GameManager : MonoBehaviour
     public static string[] moons;
     public static string destination;
     public static string currentLocation;
+    public static bool developer = false;
+
+    private void Start()
+    {
+        if (Application.isEditor || Debug.isDebugBuild) developer = true;
+    }
 
     public enum GameState
     {

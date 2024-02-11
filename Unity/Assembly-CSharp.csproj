@@ -48,6 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerController\Noclip.cs" />
      <Compile Include="Assets\Thirdparty\UnitySourceMovement\Extensions\IntExtensions.cs" />
      <Compile Include="Assets\Scripts\UI\ConsoleHandler.cs" />
      <Compile Include="Assets\Scripts\UI\PauseMenuHandler.cs" />
@@ -75,12 +76,11 @@
      <Compile Include="Assets\Thirdparty\UnitySourceMovement\Movement\InputButtons.cs" />
      <Compile Include="Assets\Scripts\Enviroment\MetalShit.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+     <Compile Include="Assets\Scripts\PlayerController\KeyBindings.cs" />
      <Compile Include="Assets\Thirdparty\UnitySourceMovement\Movement\MovementConfig.cs" />
      <Compile Include="Assets\Thirdparty\UnitySourceMovement\CameraWaterCheck.cs" />
      <Compile Include="Assets\Scripts\Utility\Item.cs" />
      <Compile Include="Assets\Scripts\Deprecated\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\PlayerController\Noclip.cs" />
-     <Compile Include="Assets\Scripts\PlayerController\KeyBindings.cs" />
      <None Include="Assets\Scripts\PlayerController\binds.txt" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Programs/Unity 2022.3.16f1/2020.3.48f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
