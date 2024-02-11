@@ -223,45 +223,43 @@ namespace Fragsurf.Movement {
 
 
             //UpdateTestBinds ();
-            if(movementEnabled) UpdateMoveData();
+            if (movementEnabled)
+            {
+                UpdateMoveData();
+                // Previous movement code
+                Vector3 positionalMovement = transform.position - prevPosition;
+                transform.position = prevPosition;
+                moveData.origin += positionalMovement;
+                // Triggers
+                if (numberOfTriggers != triggers.Count) {
+                    numberOfTriggers = triggers.Count;
 
-            // Previous movement code
-            Vector3 positionalMovement = transform.position - prevPosition;
-            transform.position = prevPosition;
-            moveData.origin += positionalMovement;
+                    underwater = false;
+                    triggers.RemoveAll (item => item == null);
+                    foreach (Collider trigger in triggers) {
 
-            // Triggers
-            if (numberOfTriggers != triggers.Count) {
-                numberOfTriggers = triggers.Count;
+                        if (trigger == null)
+                            continue;
 
-                underwater = false;
-                triggers.RemoveAll (item => item == null);
-                foreach (Collider trigger in triggers) {
+                        if (trigger.GetComponentInParent<Water> ())
+                            underwater = true;
 
-                    if (trigger == null)
-                        continue;
-
-                    if (trigger.GetComponentInParent<Water> ())
-                        underwater = true;
+                    }
 
                 }
 
+                _moveData.cameraUnderwater = _cameraWaterCheck.IsUnderwater ();
+                _cameraWaterCheckObject.transform.position = viewTransform.position;
+                moveData.underwater = underwater;
+                
+                if (allowCrouch)
+                    _controller.Crouch (this, movementConfig, Time.deltaTime);
+
+                _controller.ProcessMovement (this, movementConfig, Time.deltaTime);
+                transform.position = moveData.origin;
+                prevPosition = transform.position;
+                _colliderObject.transform.rotation = Quaternion.identity;
             }
-
-            _moveData.cameraUnderwater = _cameraWaterCheck.IsUnderwater ();
-            _cameraWaterCheckObject.transform.position = viewTransform.position;
-            moveData.underwater = underwater;
-            
-            if (allowCrouch)
-                _controller.Crouch (this, movementConfig, Time.deltaTime);
-
-            _controller.ProcessMovement (this, movementConfig, Time.deltaTime);
-
-            transform.position = moveData.origin;
-            prevPosition = transform.position;
-
-            _colliderObject.transform.rotation = Quaternion.identity;
-
         }
         
         private void UpdateTestBinds () {
