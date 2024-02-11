@@ -20,14 +20,14 @@ public class PlayerInteraction : MonoBehaviour
     private void Start()
     {
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
-        cam = Camera.main;
+        cam = GameObject.Find("PhysCamera").GetComponent<Camera>();
     }
 
     void Update()
     {
         inputHintText.text = "";
         RaycastHit hit;
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
 
         if (Input.GetKey(KeyBindings.drop) && PlayerInventory.inventory[PlayerInventory.activeSlot] != PlayerInventory.Item.None)
         {
