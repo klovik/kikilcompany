@@ -3448,7 +3448,7 @@ GameObject:
   - component: {fileID: 7519136007075221107}
   - component: {fileID: 16908013981160342}
   - component: {fileID: 1195151674967336797}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3492,7 +3492,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 8910309635316720842}
-  m_PlaneDistance: 1
+  m_PlaneDistance: 0.35
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
