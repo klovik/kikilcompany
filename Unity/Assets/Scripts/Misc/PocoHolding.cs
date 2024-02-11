@@ -5,13 +5,13 @@ using UnityEngine;
 public class PocoHolding : MonoBehaviour
 {
     bool isCalling = false;
-    AudioSource audio;
+    AudioSource audiosrc;
     public float callTickDelay = 30f;
     public float callPercent = 50f;
 
     private void Start()
     {
-        audio = transform.GetChild(0).GetComponent<AudioSource>();
+        audiosrc = transform.GetChild(0).GetComponent<AudioSource>();
         StartCoroutine(callLoop()); 
     }
     IEnumerator callLoop()
@@ -22,7 +22,7 @@ public class PocoHolding : MonoBehaviour
             if (Random.Range(0, 100) <= callPercent)
             {
                 isCalling = true;
-                audio.Play();
+                audiosrc.Play();
             }
             else
             {

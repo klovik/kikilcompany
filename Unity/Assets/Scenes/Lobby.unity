@@ -4573,7 +4573,6 @@ MonoBehaviour:
   middleMonitor: {fileID: 1948921695}
   rightMonitor: {fileID: 271582191}
   lever: {fileID: 1748542445}
-  GM: {fileID: 739738036}
 --- !u!33 &3010172807178880309
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4756,6 +4755,18 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 226614268312682419, guid: 99cfcd65d04073a49a416169feac23a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149724975559960101, guid: 99cfcd65d04073a49a416169feac23a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149724975559960101, guid: 99cfcd65d04073a49a416169feac23a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149724975559960101, guid: 99cfcd65d04073a49a416169feac23a2, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}

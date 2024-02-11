@@ -7,6 +7,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Terminal : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class Terminal : MonoBehaviour
         textField.text = "";
         Print($"> {text}");
         SendCommand(text);
+        textField.ActivateInputField();
     }
     void SendCommand(string text)
     {

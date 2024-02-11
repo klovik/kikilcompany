@@ -13,13 +13,11 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject consolePanel;
     public GameObject sellingStand;
     public GameObject sellParticlePrefab;
-    public GameManager GM;
-
+    private GameObject outlining = null;
     public Text inputHintText;
 
     private void Start()
     {
-        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         cam = GameObject.Find("PhysCamera").GetComponent<Camera>();
     }
 
@@ -58,6 +56,8 @@ public class PlayerInteraction : MonoBehaviour
             switch(hit.collider.tag)
             {
                 case "Item":
+                    outlining = hit.collider.gameObject;
+                    hit.collider.GetComponent<Outline>().enabled = true;
                     inputHintText.text += "[E] Pickup\n";
                     string itemName = hit.collider.gameObject.GetComponent<Item>().itemName;
                     string itemPrice = hit.collider.gameObject.GetComponent<Item>().price.ToString();
@@ -80,7 +80,8 @@ public class PlayerInteraction : MonoBehaviour
                         switch (hit.collider.name)
                         {
                             case "Terminal":
-                                ConsoleHandler.Open(); break;
+                                if(!ConsoleHandler.consolePanel.activeSelf) ConsoleHandler.Open();
+                                break;
                             case "Lever":
                                 GameObject obpc = GameObject.FindGameObjectWithTag("OBPC");
                                 obpc.GetComponent<OnBoardPC>().UseLever();
@@ -115,6 +116,11 @@ public class PlayerInteraction : MonoBehaviour
         {
             itemLabelText.text = "";
             inputHintText.text = $"";
+            if(outlining != null)
+            {
+                outlining.GetComponent<Outline>().enabled = false;
+                outlining = null;
+            }
         }
         Debug.DrawRay(cam.transform.position, ray.direction * 2, Color.yellow);
     }
