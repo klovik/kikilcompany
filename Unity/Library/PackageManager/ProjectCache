@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638432494226662411
-    m_Hash: 537941103
+      ticks: 638432291961525018
+    m_Hash: 2932593961
   m_LockFileStatus:
     m_FilePath: F:/Code/Unity/kikilcompany/Unity/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638432494226712277
-    m_Hash: 3258448805
+      ticks: 638432291961525018
+    m_Hash: 944678397
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:

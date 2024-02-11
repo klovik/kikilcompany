@@ -9,9 +9,7 @@ public class KeyBindings : MonoBehaviour
     [SerializeField] public static KeyCode use = KeyCode.E;
     [SerializeField] public static KeyCode drop = KeyCode.G;
     [Header("PlayerInventory")]
-    [SerializeField] public static KeyCode slot1 = KeyCode.Alpha1;
-    [SerializeField] public static KeyCode slot2 = KeyCode.Alpha2;
-    [SerializeField] public static KeyCode slot3 = KeyCode.Alpha3;
+    [SerializeField] public static KeyCode openInventory = KeyCode.G;
     [Header("PauseMenuHandler")]
     [SerializeField] public static KeyCode escape = KeyCode.Escape;
     [Header("Noclip")]
