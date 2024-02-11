@@ -55,5 +55,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectroEbator
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5141091096641585989, guid: d116a126e17223549b20b8fc1159f5c7, type: 3}
+    - {fileID: 1849889166266400993, guid: d116a126e17223549b20b8fc1159f5c7, type: 3}
+    - {fileID: 4929924251172635583, guid: d116a126e17223549b20b8fc1159f5c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d116a126e17223549b20b8fc1159f5c7, type: 3}

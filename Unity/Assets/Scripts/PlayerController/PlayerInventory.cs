@@ -147,26 +147,21 @@ public class PlayerInventory : MonoBehaviour
         //if no currentitem, but holding item exists
         if (currentItem == Item.None && holdingItem != null)
         {
-            print("1");
             Destroy(holdingItem);
             return 0;
         }
         //if holdingitem is wrong
         if (holdingItem != null && holdingItem.name != currentItem.ToString() + "(Clone)")
         {
-            print($"2 ({holdingItem.name} != {currentItem.ToString() + "(Clone)"})");
             Destroy(holdingItem);
             GameObject itemPrefab = Resources.Load<GameObject>($"ItemHolder/{currentItem}");
             GameObject i = Instantiate(itemPrefab, itemHolder.transform);
-            i.GetComponent<Collider>().enabled = false;
         }
         //if currentitem exists, but no holdingitem
         else if(holdingItem == null && currentItem != Item.None)
         {
-            print("3");
             GameObject itemPrefab = Resources.Load<GameObject>($"ItemHolder/{currentItem}");
             GameObject i = Instantiate(itemPrefab, itemHolder.transform);
-            i.GetComponent<Collider>().enabled = false;
         }
         return 1;
     }
