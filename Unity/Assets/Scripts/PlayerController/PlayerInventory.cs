@@ -15,7 +15,6 @@ public class PlayerInventory : MonoBehaviour
     public static GameObject player;
 
     private static GameObject contextMenu = null;
-
     public GameObject contextMenuPrefab;
     
     public enum ItemId {
@@ -28,7 +27,6 @@ public class PlayerInventory : MonoBehaviour
         TV,
         ViperRam
     }
-
     private void Start()
     {
         player = GameObject.Find("Player");
@@ -38,7 +36,6 @@ public class PlayerInventory : MonoBehaviour
             inventorySlots[i] = inventorySlotsParent.transform.GetChild(i).gameObject;
         }
     }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyBindings.openInventory))
@@ -56,7 +53,6 @@ public class PlayerInventory : MonoBehaviour
             UpdateInventorySlotsIcons();
         }
     }
-
     private void UpdateInventorySlotsIcons()
     {
         for (int i = 0; i < inventory.Length; i++)
@@ -72,7 +68,6 @@ public class PlayerInventory : MonoBehaviour
             }
         }
     }
-
     private static void CloseContextMenu()
     {
         Destroy(contextMenu);
@@ -119,20 +114,17 @@ public class PlayerInventory : MonoBehaviour
         }
         return 1;
     }
-
     public static void ContextMenuDropItem()
     {
         DropItem(contextedSlotIndex);
         CloseContextMenu();
     }
-
     public static void ContextMenuHoldItem()
     {
         GameObject dropped = DropItem(contextedSlotIndex);
         PlayerInteraction.PIStartHolding(dropped);
         CloseContextMenu();
     }
-    
     public static GameObject DropItem(int slotIndex)
     {
         string itemName = inventory[slotIndex].ToString();
