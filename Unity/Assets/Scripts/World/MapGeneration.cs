@@ -34,7 +34,7 @@ public class MapGeneration : MonoBehaviour
         {
             for (int z = 0; z < mapSizeZ * chunkOffsetZ; z += chunkOffsetZ)
             {
-                GameObject randomChunkPrefab = chunkPrefabs[Random.Range(0, chunkPrefabs.Length - 1)];
+                GameObject randomChunkPrefab = chunkPrefabs[Random.Range(0, chunkPrefabs.Length)];
                 generatorCursor.transform.position = new Vector3(x, 0, z);
                 GameObject chunk = Instantiate(randomChunkPrefab);
                 print($"Instantiated {randomChunkPrefab.name}");
