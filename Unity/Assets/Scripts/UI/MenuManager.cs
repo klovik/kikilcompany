@@ -35,8 +35,7 @@ public class MenuManager : MonoBehaviour
     {
         Application.Quit();
     }
-    public void GotoGame()
-    {
-        SceneManager.LoadScene("Lobby");
-    }
+    public void GotoLobby() => SceneManager.LoadScene("Lobby");
+    public void GotoCompany() => SceneManager.LoadScene("company");
+    public void GotoGame() => SceneManager.LoadScene("Game");
 }
