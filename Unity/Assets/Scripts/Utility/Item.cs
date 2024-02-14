@@ -8,10 +8,16 @@ public class Item : MonoBehaviour
 {
     [Header("Item Info")]
     public string itemName = "ItemName";
+    [Tooltip ("Placement mode")]
     public bool holdable = true;
+    [Tooltip ("Store item in inventory")]
     public bool storable = false;
+    [Tooltip ("Item usage")]
     public bool usable = false;
+    [Tooltip ("Item rotating in placement mode")]
     public bool rotatable = true;
+    [Tooltip("Item in hand slot")]
+    public bool handable = false;
     [FormerlySerializedAs("itemType")] public PlayerInventory.ItemId itemIdType = PlayerInventory.ItemId.None;
     
     [Header("Item Movement")]
@@ -42,6 +48,7 @@ public class Item : MonoBehaviour
             {
                 rotationAxisGO = Instantiate(rotationAxis, transform.position, Quaternion.identity);
                 rotationAxisGO.transform.SetParent(transform);
+                rotationAxisGO.transform.rotation = new Quaternion(0, 0, 0, 0);
             }
         }
         else
@@ -94,9 +101,9 @@ public class Item : MonoBehaviour
         gameObject.layer = 0;
         //DisableAllChildrenRender()
         gameObject.tag = "Item";
+        GetComponent<Outline>().enabled = false;
         GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineVisible;
         GetComponent<Outline>().OutlineColor = new Color(0, 0, 255, 1);
-        GetComponent<Outline>().enabled = false;
     }
 
     private void DisableAllChildrenRender()

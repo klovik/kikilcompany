@@ -17,6 +17,7 @@ public class PlayerInteraction : MonoBehaviour
     private static GameObject holdingItem = null;
     private bool inRotationMode = false;
     private rotationAxis currentRotationAxis = rotationAxis.None;
+    private bool hasItemInHand = false;
 
     private bool doNotFuckingChangeHoldingStateThisFrame = false;
     private bool doNotFuckingChangeRotatingStateThisFrame = false;
@@ -33,6 +34,8 @@ public class PlayerInteraction : MonoBehaviour
         doNotFuckingChangeRotatingStateThisFrame = false;
         ClearOutlines();
         ClearInputHint();
+
+        hasItemInHand = PlayerInventory.handSlot != PlayerInventory.ItemId.None;
 
         RaycastHit hit;
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
@@ -78,18 +81,22 @@ public class PlayerInteraction : MonoBehaviour
         }
         if (inRotationMode)
         {
-            AddToInputHint("[R] Exit rotation mode");
+            AddToInputHint("[R] Stop rotating");
+            AddToInputHint("[SHFT+R] Reset rotation");
             AddToInputHint("[X] Select axis X");
             AddToInputHint("[Y] Select axis Y");
             AddToInputHint("[Z] Select axis Z");
 
-            if (Input.GetKeyDown(KeyCode.R) && !doNotFuckingChangeRotatingStateThisFrame)
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.R))
+            {
+                holdingItem.transform.rotation = new Quaternion(0, 0, 0, 0);
+            }
+            else if (Input.GetKeyDown(KeyCode.R) && !doNotFuckingChangeRotatingStateThisFrame)
             {
                 print("yes");
                 holdingItem.GetComponent<Item>().ExitRotationMode();
                 inRotationMode = false;
             }
-             
             if (Input.GetKeyDown(KeyCode.X)) currentRotationAxis = rotationAxis.X;
             if (Input.GetKeyDown(KeyCode.Y)) currentRotationAxis = rotationAxis.Y;
             if (Input.GetKeyDown(KeyCode.Z)) currentRotationAxis = rotationAxis.Z;
@@ -107,6 +114,17 @@ public class PlayerInteraction : MonoBehaviour
                     break;
             }
         }
+
+        if (hasItemInHand)
+        {
+            AddToInputHint("[Q] Store item");
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                PlayerInventory.AddItem(PlayerInventory.handSlot);
+                PlayerInventory.handSlot = PlayerInventory.ItemId.None;
+            }
+        }
+        
         if (Physics.Raycast(ray, out hit, rayLength, layerMask))
         {
                 rayEnd.transform.position = hit.point;
@@ -117,21 +135,42 @@ public class PlayerInteraction : MonoBehaviour
                         case "Item":
                             Item item = hit.collider.GetComponent<Item>();
                             Outline outline = hit.collider.GetComponent<Outline>();
-                            if (item.holdable) AddToInputHint("[E] Pickup");
-                            if (item.storable) AddToInputHint("[F] Store");
-                            outline.enabled = true;
-                            Outlines.Add(outline);
+                            if (item.holdable && !hasItemInHand) AddToInputHint("[E] Pickup");
+                            if (item.storable && !hasItemInHand) AddToInputHint("[F] Store");
+                            if (GameManager.developer && !hasItemInHand) AddToInputHint("[C] Copy");
+                            
+                            if (!hasItemInHand)
+                            {
+                                outline.enabled = true;
+                                Outlines.Add(outline);
+                            }
+                            
                             if (Input.GetKeyDown(KeyCode.E) && !doNotFuckingChangeHoldingStateThisFrame &&
-                                hit.collider.GetComponent<Item>().holdable)
+                                hit.collider.GetComponent<Item>().holdable && !hasItemInHand)
                             {
                                 PIStartHolding(hit.collider.gameObject);
                             }
                             else if (Input.GetKeyDown(KeyCode.F) && !doNotFuckingChangeHoldingStateThisFrame &&
-                                     hit.collider.GetComponent<Item>().storable)
+                                     hit.collider.GetComponent<Item>().storable && !hasItemInHand)
                             {
                                 item.Store();
                             }
-
+                            else if (Input.GetKeyDown(KeyCode.C) && GameManager.developer && !hasItemInHand)
+                            {
+                                string itemName = hit.collider.GetComponent<Item>().itemIdType.ToString();
+                                Quaternion copyingRotation = hit.collider.transform.rotation;
+                                GameObject newItemPrefab = Resources.Load<GameObject>($"Trash/{itemName}");
+                                if (newItemPrefab != null)
+                                {
+                                    GameObject newItem = Instantiate(newItemPrefab);
+                                    newItem.transform.rotation = copyingRotation;
+                                    PIStartHolding(newItem);
+                                }
+                                else
+                                {
+                                    print("Can't copy");
+                                }
+                            }
                             break;
                     }
                 }

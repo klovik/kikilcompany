@@ -80,10 +80,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: POCO F3
   holdable: 1
-  storable: 0
+  storable: 1
   usable: 0
+  rotatable: 1
+  handable: 1
   itemIdType: 5
   canBePlacedNow: 0
+  rotationAxis: {fileID: 0}
+  rotationAxisGO: {fileID: 0}
 --- !u!54 &3276294288418234105
 Rigidbody:
   m_ObjectHideFlags: 0

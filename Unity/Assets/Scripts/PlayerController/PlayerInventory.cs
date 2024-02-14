@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class PlayerInventory : MonoBehaviour
 {
     public static ItemId[] inventory = new ItemId[16];
+    public static ItemId handSlot = ItemId.None;
     public GameObject inventoryPanel;
     private bool inventoryMenuOpened = false;
     public GameObject[] inventorySlots;
@@ -15,10 +16,21 @@ public class PlayerInventory : MonoBehaviour
     public static GameObject player;
 
     private static GameObject contextMenu = null;
-    public GameObject contextMenuPrefab;
+    public GameObject contextMenuDropPrefab;
+    public GameObject contextMenuDropHoldPrefab;
+    public GameObject contextMenuDropHoldHandPrefab;
     public Text cursorText;
     public Canvas parentCanvas;
-    public int hoveringIndex = -1;
+    public static int hoveredSlotIndex = -1;
+
+    public static int lastEmptySlot = 0;
+
+    [Header("Hand slot")]
+    public GameObject itemHolder;
+    private GameObject handedItem;
+
+    public Text contextedText, hoveredText;
+    
 
     private void UpdateCursorTextPosition()
     {
@@ -39,7 +51,7 @@ public class PlayerInventory : MonoBehaviour
     }
     public void OnInventorySlotHover(int slotIndex)
     {
-        hoveringIndex = slotIndex;
+        hoveredSlotIndex = slotIndex;
         if (inventory[slotIndex] != ItemId.None && slotIndex != contextedSlotIndex)
         {
             cursorText.text = GetItemName(inventory[slotIndex]);
@@ -47,7 +59,7 @@ public class PlayerInventory : MonoBehaviour
     }
     public void OnInventorySlotUnHover()
     {
-        hoveringIndex = -1;
+        hoveredSlotIndex = -1;
         cursorText.text = "";
     }
     private void NumerateSlots()
@@ -71,34 +83,37 @@ public class PlayerInventory : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
-        GameObject inventorySlotsParent = inventoryPanel.transform.GetChild(0).gameObject;
-        for (int i = 0; i < inventorySlotsParent.transform.childCount; i++)
-        {
-            inventorySlots[i] = inventorySlotsParent.transform.GetChild(i).gameObject;
-        }
+        AssignInventorySlots();
         NumerateSlots();
     }
     private void Update()
     {
+        lastEmptySlot = CalculateLastEmptySlot();
+        RenderItemInHand();
         UpdateCursorTextPosition();
-        if (hoveringIndex == contextedSlotIndex)
+        if (inventoryMenuOpened) UpdateInventorySlotsIcons();
+        if (hoveredSlotIndex == contextedSlotIndex) cursorText.text = "";
+        if (Input.GetKeyDown(KeyBindings.openInventory)) ChangeInventoryState(!inventoryMenuOpened);
+        if (Input.GetKeyDown(KeyCode.J)) AddItem(ItemId.HPPrinter);
+        contextedText.text = $"contexted: {contextedSlotIndex}";
+        hoveredText.text = $"hovered: {hoveredSlotIndex}";
+    }
+
+    private int CalculateLastEmptySlot()
+    {
+        for (int i = 0; i < inventory.Length; i++)
         {
-            cursorText.text = "";
-        }
-        
-        if (Input.GetKeyDown(KeyBindings.openInventory))
-        {
-            ChangeInventoryState(!inventoryMenuOpened);
+            if (inventory[i] == ItemId.None) return i;
         }
 
-        if (Input.GetKeyDown(KeyCode.J))
+        return -1;
+    }
+    private void AssignInventorySlots()
+    {
+        GameObject inventorySlotsParent = inventoryPanel.transform.GetChild(0).gameObject;
+        for (int i = 0; i < inventorySlotsParent.transform.childCount; i++)
         {
-            if(AddItem(ItemId.HPPrinter) == 1) print("Failed to add an item");
-        }
-        
-        if (inventoryMenuOpened)
-        {
-            UpdateInventorySlotsIcons();
+            inventorySlots[i] = inventorySlotsParent.transform.GetChild(i).gameObject;
         }
     }
     private void UpdateInventorySlotsIcons()
@@ -125,25 +140,45 @@ public class PlayerInventory : MonoBehaviour
     public void CreateInventoryContextMenu(GameObject slot)
     {
         int curIndex = GetSlotIndexByGameObject(slot);
-
-        if (contextedSlotIndex != -1)
-        {
-            CloseContextMenu();
-        }
+        if (contextedSlotIndex != -1) CloseContextMenu();
         
         if (inventory[curIndex] == ItemId.None || curIndex == contextedSlotIndex)
         {
-            print("I won't create context menu for empty or current slot, you stupid nigger!");
             CloseContextMenu();
             return;
         }
         
         contextedSlotIndex = GetSlotIndexByGameObject(slot);
-        contextMenu = Instantiate(contextMenuPrefab);
-        contextMenu.transform.parent = slot.transform;
+        Item contextedItem = Resources.Load<GameObject>($"Trash/{inventory[contextedSlotIndex]}").GetComponent<Item>();
+        GameObject contextMenuPrefab = null;
+        
+        if (contextedItem.holdable && contextedItem.handable) contextMenuPrefab = contextMenuDropHoldHandPrefab;
+        else if (contextedItem.holdable && !contextedItem.handable) contextMenuPrefab = contextMenuDropHoldPrefab;
+        else contextMenuPrefab = contextMenuDropPrefab;
+
+        contextMenu = Instantiate(contextMenuPrefab, slot.transform);
+
+        for (int i = 0; i < contextMenu.transform.childCount; i++)
+        {
+            switch (contextMenu.transform.GetChild(i).name)
+            {
+                case "Drop":
+                    contextMenu.transform.GetChild(i).GetComponent<Button>().onClick.RemoveAllListeners();
+                    contextMenu.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(ContextMenuDropItem);
+                    break;
+                case "Hold":
+                    contextMenu.transform.GetChild(i).GetComponent<Button>().onClick.RemoveAllListeners();
+                    contextMenu.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(ContextMenuHoldItem);
+                    break;
+                case "Hand":
+                    contextMenu.transform.GetChild(i).GetComponent<Button>().onClick.RemoveAllListeners();
+                    contextMenu.transform.GetChild(i).GetComponent<Button>().onClick.AddListener(ContextMenuHandItem);
+                    break;
+            }
+        }
+        
         contextMenu.transform.localPosition = new Vector3(0, 0, 0);
         contextMenu.transform.localScale = new Vector3(1, 1, 1);
-
     }   
     public int GetSlotIndexByGameObject(GameObject go)
     {
@@ -169,17 +204,63 @@ public class PlayerInventory : MonoBehaviour
     }
     public static void ContextMenuDropItem()
     {
-        DropItem(contextedSlotIndex);
+        if (contextedSlotIndex == -1)
+        {
+            print("Got -1 index in CTXDrop");
+            return;
+        }
+        DropItemBySlotIndex(contextedSlotIndex);
         CloseContextMenu();
     }
     public static void ContextMenuHoldItem()
     {
-        GameObject dropped = DropItem(contextedSlotIndex);
+        if (contextedSlotIndex == -1)
+        {
+            print("Got -1 index in CTXHold");
+            return;
+        }
+        GameObject dropped = DropItemBySlotIndex(contextedSlotIndex);
         PlayerInteraction.PIStartHolding(dropped);
         CloseContextMenu();
     }
-    public static GameObject DropItem(int slotIndex)
+    public static void ContextMenuHandItem()
     {
+        if (contextedSlotIndex == -1)
+        {
+            print("Got -1 index in CTXHand");
+            return;
+        }
+        if (handSlot == ItemId.None)
+        {
+            handSlot = inventory[contextedSlotIndex];
+            inventory[contextedSlotIndex] = ItemId.None;
+        }
+        CloseContextMenu();
+    }
+    private void RenderItemInHand()
+    {
+        if (handSlot == ItemId.None && handedItem != null) //if there is no held item, but handeditem exists
+        {
+            Destroy(handedItem);
+            handedItem = null;
+        }
+        else if(handSlot != ItemId.None & handedItem == null) //if there is held item, but no handeditem exists
+        {
+            GameObject item = Resources.Load<GameObject>($"ItemHolder/{handSlot}");
+            handedItem = Instantiate(item, itemHolder.transform);
+            //item.transform.SetParent(itemHolder.transform);
+        }
+        else if (handedItem != null && handSlot.ToString() != handedItem.name) //if held item != handeditem
+        {
+            Destroy(handedItem);
+            GameObject item = Resources.Load<GameObject>($"ItemHolder/{handSlot}");
+            handedItem = Instantiate(item, itemHolder.transform);
+        }
+    }
+    public static GameObject DropItemBySlotIndex(int slotIndex)
+    {
+        print($"Got {slotIndex} slotIndex");
+        print($"That's {inventory[slotIndex]} item.");
         string itemName = inventory[slotIndex].ToString();
         GameObject itemPrefab = Resources.Load<GameObject>($"Trash/{itemName}");
         inventory[slotIndex] = ItemId.None;
