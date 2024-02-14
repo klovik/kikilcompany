@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2822776730563584796}
   - component: {fileID: 3130168890263463118}
   - component: {fileID: 7540630133080128775}
+  - component: {fileID: -8184642715686292954}
   m_Layer: 0
   m_Name: HPPrinter
   m_TagString: Item
@@ -79,9 +80,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: HP Laserjet
   holdable: 1
-  storable: 0
+  storable: 1
   usable: 0
-  itemType: 3
+  itemIdType: 3
+  canBePlacedNow: 0
+--- !u!54 &-8184642715686292954
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340742178121544369}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &5541215653312355822
 GameObject:
   m_ObjectHideFlags: 0

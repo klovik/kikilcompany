@@ -116,15 +116,20 @@ public class PlayerInventory : MonoBehaviour
             }
         }
     }
-    private static void CloseContextMenu()
+    public static void CloseContextMenu()
     {
-        Destroy(contextMenu);
+        if (contextMenu != null) Destroy(contextMenu);
         contextedSlotIndex = -1;
         contextMenu = null;
     }
     public void CreateInventoryContextMenu(GameObject slot)
     {
         int curIndex = GetSlotIndexByGameObject(slot);
+
+        if (contextedSlotIndex != -1)
+        {
+            CloseContextMenu();
+        }
         
         if (inventory[curIndex] == ItemId.None || curIndex == contextedSlotIndex)
         {
@@ -215,7 +220,8 @@ public class PlayerInventory : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             inventoryPanel.GetComponent<Animator>().Play("Close");
             SurfCharacter.movementEnabled = true;
-            print("Removing text");
+            cursorText.text = "";
+            CloseContextMenu();
         }
     }
     public void Open() => ChangeInventoryState(true);

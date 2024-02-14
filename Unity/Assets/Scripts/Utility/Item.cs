@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,25 +11,69 @@ public class Item : MonoBehaviour
     public bool holdable = true;
     public bool storable = false;
     public bool usable = false;
+    public bool rotatable = true;
     [FormerlySerializedAs("itemType")] public PlayerInventory.ItemId itemIdType = PlayerInventory.ItemId.None;
     
     [Header("Item Movement")]
-    private bool isHolding = false;
+    private bool isBeingHolded = false;
     private GameObject rayEnd;
+    public bool canBePlacedNow = false;
+
+    [Header("Item Rotation")]
+    private float xRot, yRot, zRot;
+
+    private bool inRotationMode = false;
+    public GameObject rotationAxis;
+    public GameObject rotationAxisGO = null;
 
     private void Start()
     {
+        rotationAxis = Resources.Load<GameObject>("RotAxis");
         rayEnd = GameObject.Find("rayEnd");
     }
 
+    private void ChangeRotationModeState(bool state)
+    {
+        inRotationMode = state;
+        if (state)
+        {
+            print($"[{gameObject.name}] Entering rotomode");
+            if (rotationAxisGO == null)
+            {
+                rotationAxisGO = Instantiate(rotationAxis, transform.position, Quaternion.identity);
+                rotationAxisGO.transform.SetParent(transform);
+            }
+        }
+        else
+        {
+            print($"[{gameObject.name}] Exiting rotomode");
+            if(rotationAxisGO != null) Destroy(rotationAxisGO);
+            rotationAxisGO = null;
+        }
+    }
+
+    public void StartRotationMode() => ChangeRotationModeState(true);
+    public void ExitRotationMode() => ChangeRotationModeState(false);
     private void Update()
     {
-        if (isHolding)
+        if (isBeingHolded)
         {
             transform.position = rayEnd.transform.position;
         }
-    }
         
+        if(isBeingHolded) GetComponent<Outline>().enabled = canBePlacedNow;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        canBePlacedNow = true;
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        canBePlacedNow = false;
+    }
+
     public void StartHolding()
     {
         //PlayerInteraction.Outlines.Remove(gameObject.GetComponent<Outline>());
@@ -39,13 +84,13 @@ public class Item : MonoBehaviour
         GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineAll;
         //DisableAllChildrenRender()
         gameObject.layer = LayerMask.NameToLayer("Player");
-        isHolding = true;
+        isBeingHolded = true;
     }
 
     public void StopHolding()
     {
         print("Stop Holding");
-        isHolding = false;
+        isBeingHolded = false;
         gameObject.layer = 0;
         //DisableAllChildrenRender()
         gameObject.tag = "Item";
