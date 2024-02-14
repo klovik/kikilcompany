@@ -16,7 +16,48 @@ public class PlayerInventory : MonoBehaviour
 
     private static GameObject contextMenu = null;
     public GameObject contextMenuPrefab;
-    
+    public Text cursorText;
+    public Canvas parentCanvas;
+    public int hoveringIndex = -1;
+
+    private void UpdateCursorTextPosition()
+    {
+        Vector2 movePos;
+
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            parentCanvas.transform as RectTransform,
+            Input.mousePosition, parentCanvas.worldCamera,
+            out movePos);
+
+        movePos.y += 16;
+        cursorText.transform.position = parentCanvas.transform.TransformPoint(movePos);
+    }
+    public string GetItemName(ItemId item)
+    {
+        Item itemGO = Resources.Load<Item>($"Trash/{item}");
+        return itemGO.itemName;
+    }
+    public void OnInventorySlotHover(int slotIndex)
+    {
+        hoveringIndex = slotIndex;
+        if (inventory[slotIndex] != ItemId.None && slotIndex != contextedSlotIndex)
+        {
+            cursorText.text = GetItemName(inventory[slotIndex]);
+        }
+    }
+    public void OnInventorySlotUnHover()
+    {
+        hoveringIndex = -1;
+        cursorText.text = "";
+    }
+    private void NumerateSlots()
+    {
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            string curName = inventorySlots[i].name;
+            inventorySlots[i].name = $"[#{i}] {curName}";
+        }
+    }
     public enum ItemId {
         None,
         ECord,
@@ -35,9 +76,16 @@ public class PlayerInventory : MonoBehaviour
         {
             inventorySlots[i] = inventorySlotsParent.transform.GetChild(i).gameObject;
         }
+        NumerateSlots();
     }
     private void Update()
     {
+        UpdateCursorTextPosition();
+        if (hoveringIndex == contextedSlotIndex)
+        {
+            cursorText.text = "";
+        }
+        
         if (Input.GetKeyDown(KeyBindings.openInventory))
         {
             ChangeInventoryState(!inventoryMenuOpened);
@@ -167,6 +215,7 @@ public class PlayerInventory : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             inventoryPanel.GetComponent<Animator>().Play("Close");
             SurfCharacter.movementEnabled = true;
+            print("Removing text");
         }
     }
     public void Open() => ChangeInventoryState(true);
