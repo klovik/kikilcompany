@@ -8,12 +8,14 @@ using UnityEngine.UI;
 public class PlayerInteraction : MonoBehaviour
 {
     public Camera cam;
-    public float rayLength = 3f;
+    public float normalRayLength = 3.5f;
+    public float rayLength = 3.5f;
     public float rotationStrength = 4f;
+    [SerializeField] private float rayAdjustCoefficient = 0.3f;
     public Text inputHintText;
     public Transform rayEnd;
     public static List<Outline> Outlines = new List<Outline>();
-    public static bool isHoldingItem = false;
+    private static bool isHoldingItem = false;
     private static GameObject holdingItem = null;
     private bool inRotationMode = false;
     private rotationAxis currentRotationAxis = rotationAxis.None;
@@ -47,9 +49,13 @@ public class PlayerInteraction : MonoBehaviour
         if (isHoldingItem)
         {
             Item hItem = holdingItem.GetComponent<Item>();
-            if (hItem.canBePlacedNow) AddToInputHint("[E] Confrm");
+            AddToInputHint("[SHFT MWHL] Adjust distance");
+            if (hItem.canBePlacedNow) AddToInputHint("[E] Confirm");
             if (hItem.storable) AddToInputHint("[F] Store");
             if (hItem.rotatable && !inRotationMode) AddToInputHint("[R] Rotate");
+
+            if (Input.GetAxis("Mouse ScrollWheel") < 0f && Input.GetKey(KeyCode.LeftShift)) rayLength -= rayAdjustCoefficient;
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f && Input.GetKey(KeyCode.LeftShift)) rayLength += rayAdjustCoefficient;
 
             if (Input.GetKeyDown(KeyCode.E) && hItem.canBePlacedNow)
             {
@@ -58,7 +64,6 @@ public class PlayerInteraction : MonoBehaviour
                 inRotationMode = false;
                 hItem.GetComponent<Item>().ExitRotationMode();
             }
-
             if (Input.GetKeyDown(KeyCode.F) && hItem.storable)
             {
                 PIStoreHoldingItem();
@@ -195,12 +200,16 @@ public class PlayerInteraction : MonoBehaviour
         holdingItem.GetComponent<Item>().StopHolding();
         holdingItem = null;
         isHoldingItem = false;
+        PlayerInteraction PI = GameObject.Find("Player").GetComponent<PlayerInteraction>();
+        PI.rayLength = PI.normalRayLength;
     }
 
     public static void PIStoreHoldingItem()
     {
         holdingItem.GetComponent<Item>().Store();
         isHoldingItem = false;
+        PlayerInteraction PI = GameObject.Find("Player").GetComponent<PlayerInteraction>();
+        PI.rayLength = PI.normalRayLength;
     }
     
     private void ClearInputHint()

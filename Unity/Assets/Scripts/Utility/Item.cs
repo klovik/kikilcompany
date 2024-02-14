@@ -8,6 +8,8 @@ public class Item : MonoBehaviour
 {
     [Header("Item Info")]
     public string itemName = "ItemName";
+    [FormerlySerializedAs("itemType")] public PlayerInventory.ItemId itemIdType = PlayerInventory.ItemId.None;
+    [Header("Item Attributes")]
     [Tooltip ("Placement mode")]
     public bool holdable = true;
     [Tooltip ("Store item in inventory")]
@@ -18,19 +20,18 @@ public class Item : MonoBehaviour
     public bool rotatable = true;
     [Tooltip("Item in hand slot")]
     public bool handable = false;
-    [FormerlySerializedAs("itemType")] public PlayerInventory.ItemId itemIdType = PlayerInventory.ItemId.None;
     
     [Header("Item Movement")]
     private bool isBeingHolded = false;
     private GameObject rayEnd;
-    public bool canBePlacedNow = false;
+    [HideInInspector] public bool canBePlacedNow = false;
 
     [Header("Item Rotation")]
     private float xRot, yRot, zRot;
 
     private bool inRotationMode = false;
-    public GameObject rotationAxis;
-    public GameObject rotationAxisGO = null;
+    private GameObject rotationAxis;
+    private GameObject rotationAxisGO = null;
 
     private void Start()
     {

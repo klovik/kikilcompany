@@ -78,7 +78,8 @@ public class PlayerInventory : MonoBehaviour
         Pioneer,
         Poco,
         TV,
-        ViperRam
+        ViperRam,
+        Palette
     }
     private void Start()
     {
