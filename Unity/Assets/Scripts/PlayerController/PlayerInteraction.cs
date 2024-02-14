@@ -7,20 +7,30 @@ using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    [Header("Raycast shit")]
     public Camera cam;
     public float normalRayLength = 3.5f;
     public float rayLength = 3.5f;
-    public float rotationStrength = 4f;
     [SerializeField] private float rayAdjustCoefficient = 0.3f;
-    public Text inputHintText;
     public Transform rayEnd;
+    
+    [Header("Misc")]
+    public Text inputHintText;
+    
+    [Header("Item placement")]
     public static List<Outline> Outlines = new List<Outline>();
     private static bool isHoldingItem = false;
     private static GameObject holdingItem = null;
+    
+    [Header("Item rotation")]
+    public float rotationStrength = 4f;
     private bool inRotationMode = false;
     private rotationAxis currentRotationAxis = rotationAxis.None;
+    
+    [Header("In-hand item holding")]
     private bool hasItemInHand = false;
 
+    [Header("Cruthes")]
     private bool doNotFuckingChangeHoldingStateThisFrame = false;
     private bool doNotFuckingChangeRotatingStateThisFrame = false;
     public Canvas parentCanvas;
@@ -29,7 +39,6 @@ public class PlayerInteraction : MonoBehaviour
     {
         None, X, Y, Z
     }
-
     private void Update()
     {
         doNotFuckingChangeHoldingStateThisFrame = false;
@@ -59,26 +68,17 @@ public class PlayerInteraction : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E) && hItem.canBePlacedNow)
             {
-                PIStopHolding();
-                doNotFuckingChangeHoldingStateThisFrame = true;
-                inRotationMode = false;
-                hItem.GetComponent<Item>().ExitRotationMode();
+                PlaceHeldItem();
             }
             if (Input.GetKeyDown(KeyCode.F) && hItem.storable)
             {
-                PIStoreHoldingItem();
-                inRotationMode = false;
-                hItem.GetComponent<Item>().ExitRotationMode();
-                doNotFuckingChangeHoldingStateThisFrame = true;
+                StoreHeldItem();
             }
-
             if (Input.GetKeyDown(KeyCode.R) && hItem.rotatable && !inRotationMode)
             {
-                hItem.StartRotationMode();
-                inRotationMode = true;
+                StartRotatingMode();
                 doNotFuckingChangeRotatingStateThisFrame = true;
             }
-
             if (Input.GetKeyDown(KeyCode.E) && hItem.usable)
             {
                 //TODO: use items
@@ -98,7 +98,6 @@ public class PlayerInteraction : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.R) && !doNotFuckingChangeRotatingStateThisFrame)
             {
-                print("yes");
                 holdingItem.GetComponent<Item>().ExitRotationMode();
                 inRotationMode = false;
             }
@@ -162,19 +161,7 @@ public class PlayerInteraction : MonoBehaviour
                             }
                             else if (Input.GetKeyDown(KeyCode.C) && GameManager.developer && !hasItemInHand)
                             {
-                                string itemName = hit.collider.GetComponent<Item>().itemIdType.ToString();
-                                Quaternion copyingRotation = hit.collider.transform.rotation;
-                                GameObject newItemPrefab = Resources.Load<GameObject>($"Trash/{itemName}");
-                                if (newItemPrefab != null)
-                                {
-                                    GameObject newItem = Instantiate(newItemPrefab);
-                                    newItem.transform.rotation = copyingRotation;
-                                    PIStartHolding(newItem);
-                                }
-                                else
-                                {
-                                    print("Can't copy");
-                                }
+                                CopyItem(hit.collider.gameObject);
                             }
                             break;
                     }
@@ -188,6 +175,49 @@ public class PlayerInteraction : MonoBehaviour
             Debug.DrawRay(cam.transform.position, cam.transform.forward * rayLength, Color.green);
         }
     }
+
+    private void PlaceHeldItem()
+    {
+        PIStopHolding();
+        doNotFuckingChangeHoldingStateThisFrame = true;
+        inRotationMode = false;
+        holdingItem.GetComponent<Item>().ExitRotationMode();
+    }
+
+    private void CopyItem(GameObject item)
+    {
+        string itemName = item.GetComponent<Item>().itemIdType.ToString();
+        Quaternion copyingRotation = item.transform.rotation;
+        GameObject newItemPrefab = Resources.Load<GameObject>($"Trash/{itemName}");
+        if (newItemPrefab != null)
+        {
+            GameObject newItem = Instantiate(newItemPrefab);
+            newItem.transform.rotation = copyingRotation;
+            PIStartHolding(newItem);
+        }
+        else
+        {
+            print("Can't copy");
+        }
+    }
+
+    private void StoreHeldItem()
+    {
+        holdingItem.GetComponent<Item>().Store();
+        isHoldingItem = false;
+        PlayerInteraction PI = GameObject.Find("Player").GetComponent<PlayerInteraction>();
+        PI.rayLength = PI.normalRayLength;
+        inRotationMode = false;
+        holdingItem.GetComponent<Item>().ExitRotationMode();
+        doNotFuckingChangeHoldingStateThisFrame = true;
+    }
+
+    private void StartRotatingMode()
+    {
+        holdingItem.GetComponent<Item>().StartRotationMode();
+        inRotationMode = true;
+    }
+    
     public static void PIStartHolding(GameObject item)
     {
         holdingItem = item.gameObject;
@@ -203,15 +233,6 @@ public class PlayerInteraction : MonoBehaviour
         PlayerInteraction PI = GameObject.Find("Player").GetComponent<PlayerInteraction>();
         PI.rayLength = PI.normalRayLength;
     }
-
-    public static void PIStoreHoldingItem()
-    {
-        holdingItem.GetComponent<Item>().Store();
-        isHoldingItem = false;
-        PlayerInteraction PI = GameObject.Find("Player").GetComponent<PlayerInteraction>();
-        PI.rayLength = PI.normalRayLength;
-    }
-    
     private void ClearInputHint()
     {
         inputHintText.text = "";
