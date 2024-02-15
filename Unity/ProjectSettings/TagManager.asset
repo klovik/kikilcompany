@@ -12,6 +12,7 @@ TagManager:
   - AIFollowPoint
   - CurrentDest
   - Ground
+  - rayEnd
   layers:
   - Default
   - TransparentFX

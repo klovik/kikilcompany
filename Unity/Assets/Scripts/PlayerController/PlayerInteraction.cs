@@ -11,6 +11,7 @@ public class PlayerInteraction : MonoBehaviour
     public Camera cam;
     public float normalRayLength = 3.5f;
     public float rayLength = 3.5f;
+    public float maxRayLength = 7.5f;
     [SerializeField] private float rayAdjustCoefficient = 0.3f;
     public Transform rayEnd;
     
@@ -23,7 +24,7 @@ public class PlayerInteraction : MonoBehaviour
     private static GameObject holdingItem = null;
     
     [Header("Item rotation")]
-    public float rotationStrength = 4f;
+    public static float rotationStrength = 100f;
     private bool inRotationMode = false;
     private rotationAxis currentRotationAxis = rotationAxis.None;
     
@@ -34,6 +35,9 @@ public class PlayerInteraction : MonoBehaviour
     private bool doNotFuckingChangeHoldingStateThisFrame = false;
     private bool doNotFuckingChangeRotatingStateThisFrame = false;
     public Canvas parentCanvas;
+
+    [Header("Cheats")]
+    public static bool freePlacement = false;
 
     private enum rotationAxis
     {
@@ -63,10 +67,13 @@ public class PlayerInteraction : MonoBehaviour
             if (hItem.storable) AddToInputHint("[F] Store");
             if (hItem.rotatable && !inRotationMode) AddToInputHint("[R] Rotate");
 
-            if (Input.GetAxis("Mouse ScrollWheel") < 0f && Input.GetKey(KeyCode.LeftShift)) rayLength -= rayAdjustCoefficient;
-            if (Input.GetAxis("Mouse ScrollWheel") > 0f && Input.GetKey(KeyCode.LeftShift)) rayLength += rayAdjustCoefficient;
-
-            if (Input.GetKeyDown(KeyCode.E) && hItem.canBePlacedNow)
+            if (rayLength > rayAdjustCoefficient && rayLength < maxRayLength)
+            {
+                if (Input.GetAxis("Mouse ScrollWheel") < 0f && Input.GetKey(KeyCode.LeftShift)) rayLength -= rayAdjustCoefficient;
+                if (Input.GetAxis("Mouse ScrollWheel") > 0f && Input.GetKey(KeyCode.LeftShift)) rayLength += rayAdjustCoefficient;
+            }
+            
+            if (Input.GetKeyDown(KeyCode.E) && (hItem.canBePlacedNow || freePlacement) )
             {
                 PlaceHeldItem();
             }

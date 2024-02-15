@@ -4,18 +4,24 @@ using System.Transactions;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DebugMenu : MonoBehaviour
 {
     private bool isDebugMenuOpened = false;
     private GameObject itemList;
+    private GameObject sceneList;
     public GameObject itemPrefab;
+    public GameObject scenePrefab;
+    public Text freePlacementButtonText;
 
     private void Start()
     {
         itemList = transform.GetChild(1).GetChild(0).gameObject;
+        sceneList = transform.GetChild(2).GetChild(0).gameObject;
         UpdateItemList();
+        UpdateScenesList();
     }
     public void SwitchPanel(int index)
     {
@@ -39,7 +45,6 @@ public class DebugMenu : MonoBehaviour
 
     private void UpdateItemList()
     {
-        DestroyAllItemsList();
         GameObject[] items = Resources.LoadAll<GameObject>("Trash");
         for (int i = 0; i < items.Length; i++)
         {
@@ -49,13 +54,27 @@ public class DebugMenu : MonoBehaviour
                 GameObject item = Instantiate(itemPrefab, itemList.transform);
                 item.GetComponent<Image>().sprite = spr;
                 int index = i;
-                item.GetComponent<Button>().onClick.AddListener(delegate { CreateItemByString(items[index].name); }); // Используем локальную переменную вместо i
-            }
-            else
-            {
-                
+                item.GetComponent<Button>().onClick.AddListener(delegate { CreateItemByString(items[index].name); });
             }
         }
+    }
+
+    private void UpdateScenesList()
+    {
+        EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
+        for (int i = 0; i < scenes.Length; i++)
+        {
+            GameObject sceneButton = Instantiate(scenePrefab, sceneList.transform);
+            int index = i;
+            sceneButton.GetComponent<Button>().onClick.AddListener(delegate { LoadSceneByIndex(index); });
+            sceneButton.GetComponent<Text>().text = scenes[index].path.Split('/')[2];
+        }
+        
+    }
+
+    private void LoadSceneByIndex(int index)
+    {
+        SceneManager.LoadScene(index);
     }
 
     public void CreateItemByString(string item)
@@ -65,14 +84,11 @@ public class DebugMenu : MonoBehaviour
         PlayerInteraction.PIStartHolding(itemInstance);
     }
 
-    private void DestroyAllItemsList()
+    public void ToggleFreePlacement()
     {
-        for (int i = 0; i < itemList.transform.childCount; i++)
-        {
-            Destroy(itemList.transform.GetChild(i).gameObject);
-        }
+        PlayerInteraction.freePlacement = !PlayerInteraction.freePlacement;
+        freePlacementButtonText.color = PlayerInteraction.freePlacement ? new Color(0, 255, 0) : new Color(255, 255, 255);
     }
-
     public void Open() => ChangeDebugMenuState(true);
     public void Close() => ChangeDebugMenuState(false);
 }

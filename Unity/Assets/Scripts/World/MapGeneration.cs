@@ -1,16 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using UnityEditor.Playables;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class MapGeneration : MonoBehaviour
 {
     public GameObject[] testPrefabs;
     public int chunkOffsetX, chunkOffsetZ;
     public float mapSizeX, mapSizeZ;
+    public bool randomizeRotation = true;
     private GameObject player;
     private Transform generatorCursor;
     private GameObject mapParent;
+
+    private Quaternion[] chunkRotations =
+        { new Quaternion(0, 0, 0, 0), new Quaternion(0, 0, 90, 0), new Quaternion(0, 0, -90, 0), new Quaternion(0, 0, 180, 0) };
 
     private void Awake()
     {
@@ -41,6 +48,7 @@ public class MapGeneration : MonoBehaviour
                 chunk.name = $"#{i} {randomChunkPrefab.name}";
                 chunk.transform.SetParent(mapParent.transform, true);
                 chunk.transform.localPosition = generatorCursor.transform.position;
+                if (randomizeRotation) chunk.transform.rotation = Util.ArrayRandomChoice(chunkRotations);
                 i++;
             }
         }

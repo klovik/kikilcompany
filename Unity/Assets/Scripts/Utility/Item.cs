@@ -36,7 +36,7 @@ public class Item : MonoBehaviour
     private void Start()
     {
         rotationAxis = Resources.Load<GameObject>("RotAxis");
-        rayEnd = GameObject.Find("rayEnd");
+        rayEnd = GameObject.FindGameObjectWithTag("rayEnd");
     }
 
     private void ChangeRotationModeState(bool state)
