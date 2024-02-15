@@ -20,4 +20,7 @@ public class KeyBindings : MonoBehaviour
     [SerializeField] public static KeyCode noclipRight = KeyCode.D;
     [SerializeField] public static KeyCode noclipUp = KeyCode.Space;
     [SerializeField] public static KeyCode noclipDown = KeyCode.LeftControl;
+
+    [Header("Debug Menu")]
+    [SerializeField] public static KeyCode debugToggle = KeyCode.H;
 }

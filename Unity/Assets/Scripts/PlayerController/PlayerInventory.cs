@@ -205,37 +205,24 @@ public class PlayerInventory : MonoBehaviour
     }
     public static void ContextMenuDropItem()
     {
-        if (contextedSlotIndex == -1)
-        {
-            print("Got -1 index in CTXDrop");
-            return;
-        }
+        if (contextedSlotIndex == -1) return;
         DropItemBySlotIndex(contextedSlotIndex);
         CloseContextMenu();
     }
     public static void ContextMenuHoldItem()
     {
-        if (contextedSlotIndex == -1)
-        {
-            print("Got -1 index in CTXHold");
-            return;
-        }
+        if (PlayerInteraction.isHoldingItem) return;
+        if (contextedSlotIndex == -1) return;
         GameObject dropped = DropItemBySlotIndex(contextedSlotIndex);
         PlayerInteraction.PIStartHolding(dropped);
         CloseContextMenu();
     }
     public static void ContextMenuHandItem()
     {
-        if (contextedSlotIndex == -1)
-        {
-            print("Got -1 index in CTXHand");
-            return;
-        }
-        if (handSlot == ItemId.None)
-        {
-            handSlot = inventory[contextedSlotIndex];
-            inventory[contextedSlotIndex] = ItemId.None;
-        }
+        if (contextedSlotIndex == -1) return;
+        if (handSlot != ItemId.None) return;
+        handSlot = inventory[contextedSlotIndex];
+        inventory[contextedSlotIndex] = ItemId.None;
         CloseContextMenu();
     }
     private void RenderItemInHand()
@@ -260,8 +247,6 @@ public class PlayerInventory : MonoBehaviour
     }
     public static GameObject DropItemBySlotIndex(int slotIndex)
     {
-        print($"Got {slotIndex} slotIndex");
-        print($"That's {inventory[slotIndex]} item.");
         string itemName = inventory[slotIndex].ToString();
         GameObject itemPrefab = Resources.Load<GameObject>($"Trash/{itemName}");
         inventory[slotIndex] = ItemId.None;
@@ -294,14 +279,14 @@ public class PlayerInventory : MonoBehaviour
             inventoryMenuOpened = true;
             Cursor.lockState = CursorLockMode.None;
             inventoryPanel.GetComponent<Animator>().Play("Open");
-            SurfCharacter.movementEnabled = false;
+            //SurfCharacter.movementEnabled = false;
         }
         else
         {
             inventoryMenuOpened = false;
             Cursor.lockState = CursorLockMode.Locked;
             inventoryPanel.GetComponent<Animator>().Play("Close");
-            SurfCharacter.movementEnabled = true;
+            //SurfCharacter.movementEnabled = true;
             cursorText.text = "";
             CloseContextMenu();
         }

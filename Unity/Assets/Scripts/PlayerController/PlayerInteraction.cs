@@ -19,7 +19,7 @@ public class PlayerInteraction : MonoBehaviour
     
     [Header("Item placement")]
     public static List<Outline> Outlines = new List<Outline>();
-    private static bool isHoldingItem = false;
+    public static bool isHoldingItem = false;
     private static GameObject holdingItem = null;
     
     [Header("Item rotation")]
@@ -178,10 +178,10 @@ public class PlayerInteraction : MonoBehaviour
 
     private void PlaceHeldItem()
     {
-        PIStopHolding();
         doNotFuckingChangeHoldingStateThisFrame = true;
         inRotationMode = false;
         holdingItem.GetComponent<Item>().ExitRotationMode();
+        PIStopHolding();
     }
 
     private void CopyItem(GameObject item)
