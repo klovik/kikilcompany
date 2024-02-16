@@ -79,7 +79,15 @@ public class PlayerInventory : MonoBehaviour
         Poco,
         TV,
         ViperRam,
-        Palette
+        Palette,
+        GreenChair,
+        RedChair,
+        BlueChair,
+        WoodenTable,
+        RedTable,
+        GreenTable,
+        BlackTable,
+        Boombox
     }
     private void Start()
     {
@@ -227,6 +235,8 @@ public class PlayerInventory : MonoBehaviour
     }
     private void RenderItemInHand()
     {
+        if (handSlot != ItemId.None && handedItem != null && handSlot == handedItem.GetComponent<Item>().itemIdType) return;
+        
         if (handSlot == ItemId.None && handedItem != null) //if there is no held item, but handeditem exists
         {
             Destroy(handedItem);

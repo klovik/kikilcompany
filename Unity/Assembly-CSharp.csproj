@@ -49,6 +49,7 @@
     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Extensions\IntExtensions.cs" />
     <Compile Include="Assets\Scripts\UI\ConsoleHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\Scripts\Deprecated\OnBoardPC.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenuHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Thirdparty\UnitySourceMovement\Extensions\VectorExtensions.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Assets\Scripts\World\MapGeneration.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\PlayerController\PlayerInteraction.cs" />
+    <Compile Include="Assets\Scripts\Utility\Util.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Thirdparty\UnitySourceMovement\TraceUtil\Tracer.cs" />
     <Compile Include="Assets\Thirdparty\UnitySourceMovement\TraceUtil\Trace.cs" />
@@ -113,8 +115,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scripts\Deprecated\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Utility\Util.cs" />
-    <Compile Include="Assets\Scripts\Deprecated\OnBoardPC.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -743,11 +743,11 @@
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>F:\Code\Unity\kikilcompany\Unity\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>F:\Code\Unity\kikilcompany\Unity\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>F:\Code\Unity\kikilcompany\Unity\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>F:\Code\Unity\kikilcompany\Unity\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -34,10 +34,21 @@ public class GameManager : MonoBehaviour
         fpstext = GameObject.Find("FPS").GetComponent<Text>();
         velocityText = GameObject.Find("VelocityText").GetComponent<Text>();
     }
+
+    private void Reassign()
+    {
+        player = GameObject.Find("Player");
+        fpstext = GameObject.Find("FPS").GetComponent<Text>();
+        velocityText = GameObject.Find("VelocityText").GetComponent<Text>();
+    }
+    
     private void Update()
     {
+        if (player == null || fpstext == null || velocityText == null) Reassign();
+        
         if (!fpsCounterEnabled && fpstext.gameObject.activeSelf) fpstext.gameObject.SetActive(false);
         else fpstext.text = "FPS: " + (Mathf.FloorToInt(1.0f / Time.deltaTime)).ToString();
+            
 
         if (!velocityCounterEnabled && velocityText.gameObject.activeSelf) velocityText.gameObject.SetActive(false);
         else

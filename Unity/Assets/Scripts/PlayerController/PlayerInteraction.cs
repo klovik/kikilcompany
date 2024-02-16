@@ -86,10 +86,6 @@ public class PlayerInteraction : MonoBehaviour
                 StartRotatingMode();
                 doNotFuckingChangeRotatingStateThisFrame = true;
             }
-            if (Input.GetKeyDown(KeyCode.E) && hItem.usable)
-            {
-                //TODO: use items
-            }
         }
         if (inRotationMode)
         {
@@ -128,11 +124,21 @@ public class PlayerInteraction : MonoBehaviour
 
         if (hasItemInHand)
         {
+            AddToInputHint("[E] Use item");
             AddToInputHint("[Q] Store item");
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 PlayerInventory.AddItem(PlayerInventory.handSlot);
                 PlayerInventory.handSlot = PlayerInventory.ItemId.None;
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Item item = Resources.Load<GameObject>($"Trash/{PlayerInventory.handSlot}").GetComponent<Item>();
+                if (item.handUsable)
+                {
+                    item.useDelegate();
+                }
             }
         }
         
@@ -148,6 +154,7 @@ public class PlayerInteraction : MonoBehaviour
                             Outline outline = hit.collider.GetComponent<Outline>();
                             if (item.holdable && !hasItemInHand) AddToInputHint("[E] Pickup");
                             if (item.storable && !hasItemInHand) AddToInputHint("[F] Store");
+                            if (item.placeUsable && !hasItemInHand) AddToInputHint("[Q] Use");
                             if (GameManager.developer && !hasItemInHand) AddToInputHint("[C] Copy");
                             
                             if (!hasItemInHand)
@@ -165,6 +172,10 @@ public class PlayerInteraction : MonoBehaviour
                                      hit.collider.GetComponent<Item>().storable && !hasItemInHand)
                             {
                                 item.Store();
+                            }
+                            else if (Input.GetKeyDown(KeyCode.Q) && item.placeUsable && !hasItemInHand)
+                            {
+                                item.useDelegate();
                             }
                             else if (Input.GetKeyDown(KeyCode.C) && GameManager.developer && !hasItemInHand)
                             {

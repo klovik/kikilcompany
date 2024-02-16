@@ -355,7 +355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273117484815327360}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.9645658, y: 0.50000095, z: 7.866659}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 1273117484669623571}
@@ -391,15 +391,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Electrical Cord
+  itemIdType: 1
   holdable: 1
   storable: 1
   usable: 0
   rotatable: 1
   handable: 0
-  itemIdType: 1
   canBePlacedNow: 0
-  rotationAxis: {fileID: 0}
-  rotationAxisGO: {fileID: 0}
 --- !u!114 &1273117484815327361
 MonoBehaviour:
   m_ObjectHideFlags: 0

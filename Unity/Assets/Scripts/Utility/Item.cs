@@ -14,12 +14,22 @@ public class Item : MonoBehaviour
     public bool holdable = true;
     [Tooltip ("Store item in inventory")]
     public bool storable = false;
-    [Tooltip ("Item usage")]
-    public bool usable = false;
     [Tooltip ("Item rotating in placement mode")]
     public bool rotatable = true;
     [Tooltip("Item in hand slot")]
     public bool handable = false;
+    
+    [Header("Item Usage")]
+    [Tooltip ("Handed using")]
+    public bool handUsable = false;
+    [Tooltip ("Placed using")]
+    public bool placeUsable = false;
+    
+    public delegate void UseDelegate();
+    [Tooltip("Use delegate")]
+    public UseDelegate useDelegate;
+
+    private bool isBeingUse = false;
     
     [Header("Item Movement")]
     private bool isBeingHolded = false;
@@ -37,6 +47,20 @@ public class Item : MonoBehaviour
     {
         rotationAxis = Resources.Load<GameObject>("RotAxis");
         rayEnd = GameObject.FindGameObjectWithTag("rayEnd");
+        if (handUsable || placeUsable)
+        {
+            useDelegate = delegate { UnknownDelegate(); };
+            System.Reflection.MethodInfo method = this.GetType().GetMethod(itemIdType.ToString() + "Use");
+            if (method != null)
+            {
+                useDelegate = (UseDelegate)Delegate.CreateDelegate(typeof(UseDelegate), this, method);
+                print("ASSigned");
+            }
+            else
+            {
+                print($"Usage method {itemIdType.ToString()}Use not found!");
+            }
+        }
     }
 
     private void ChangeRotationModeState(bool state)
@@ -66,22 +90,22 @@ public class Item : MonoBehaviour
     {
         if (isBeingHolded)
         {
+            if (rayEnd == null) rayEnd = GameObject.Find("rayEnd");
             transform.position = rayEnd.transform.position;
         }
         
         if(isBeingHolded) GetComponent<Outline>().enabled = canBePlacedNow;
-    }
 
+        if (isBeingUse && itemIdType == PlayerInventory.ItemId.Boombox) BoomboxChecker();
+    }
     private void OnCollisionEnter(Collision other)
     {
         canBePlacedNow = true;
     }
-
     private void OnCollisionExit(Collision other)
     {
         canBePlacedNow = false;
     }
-
     public void StartHolding()
     {
         //PlayerInteraction.Outlines.Remove(gameObject.GetComponent<Outline>());
@@ -94,7 +118,6 @@ public class Item : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer("Player");
         isBeingHolded = true;
     }
-
     public void StopHolding()
     {
         print("Stop Holding");
@@ -106,26 +129,44 @@ public class Item : MonoBehaviour
         GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineVisible;
         GetComponent<Outline>().OutlineColor = new Color(0, 0, 255, 1);
     }
-
-    private void DisableAllChildrenRender()
-    {
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).GetComponent<Renderer>().enabled = false;
-        }
-    }
-    private void EnableAllChildrenRender()
-    {
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).GetComponent<Renderer>().enabled = true;
-        }
-    }
-
     public void Store()
     {
         PlayerInventory.AddItem(itemIdType);
         PlayerInteraction.Outlines.Remove(gameObject.GetComponent<Outline>());
         Destroy(gameObject);
+    }
+
+    public void UnknownDelegate()
+    {
+        print("Delegate not set!");
+    }
+    public void BoomboxUse()
+    {
+        AudioSource audio = transform.GetComponentInChildren<AudioSource>();
+        if (!isBeingUse)
+        {
+            isBeingUse = true;
+            transform.GetComponentInChildren<Animator>().Play("Playing");
+            AudioClip[] clips = Resources.LoadAll<AudioClip>("BoomboxAudio");
+            AudioClip clip = Util.ArrayRandomChoice(clips);
+            audio.PlayOneShot(clip);
+        }
+        else
+        {
+            transform.GetComponentInChildren<Animator>().Play("Idle");
+            isBeingUse = false;
+            audio.Stop();
+        }
+
+    }
+
+    private void BoomboxChecker()
+    {
+        AudioSource audio = transform.GetComponentInChildren<AudioSource>();
+        if (!audio.isPlaying)
+        {
+            transform.GetComponentInChildren<Animator>().Play("Idle");
+            isBeingUse = false;
+        }
     }
 }
