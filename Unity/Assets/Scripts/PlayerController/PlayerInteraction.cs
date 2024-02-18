@@ -137,7 +137,9 @@ public class PlayerInteraction : MonoBehaviour
                 Item item = Resources.Load<GameObject>($"Trash/{PlayerInventory.handSlot}").GetComponent<Item>();
                 if (item.handUsable)
                 {
-                    item.useDelegate();
+                    System.Reflection.MethodInfo method = item.GetType().GetMethod(item.itemIdType + "Use");
+                    if (method != null) method.Invoke(item, null);
+                    else print("Delegate not set");
                 }
             }
         }

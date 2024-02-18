@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using UnityEditor.Playables;
 using UnityEngine;
@@ -9,6 +10,7 @@ using Random = UnityEngine.Random;
 public class MapGeneration : MonoBehaviour
 {
     public GameObject[] testPrefabs;
+    public GameObject[] debugPrefabs;
     public int chunkOffsetX, chunkOffsetZ;
     public float mapSizeX, mapSizeZ;
     public bool randomizeRotation = true;
@@ -30,7 +32,7 @@ public class MapGeneration : MonoBehaviour
     private void Start()
     {
         //StartCoroutine(SlowGenerateChunks(testPrefabs, 1));
-        GenerateChunks(testPrefabs);
+        GenerateChunks(debugPrefabs);
         OnGenerationEnd();
     }
 
@@ -49,12 +51,26 @@ public class MapGeneration : MonoBehaviour
                 chunk.transform.SetParent(mapParent.transform, true);
                 chunk.transform.localPosition = generatorCursor.transform.position;
                 if (randomizeRotation) chunk.transform.rotation = Util.ArrayRandomChoice(chunkRotations);
+                GenerateItemsOnChunk(chunk);
                 i++;
             }
         }
 
         mapParent.transform.position = new Vector3(-(mapSizeX/2)*chunkOffsetX, 0, -(mapSizeZ/2)*chunkOffsetZ);
         print("Generation done!");
+    }
+
+    private void GenerateItemsOnChunk(GameObject chunk)
+    {
+        for (int i = 0; i < chunk.transform.childCount; i++)
+        {
+            GeneratableItem gi = chunk.transform.GetChild(i).GetComponent<GeneratableItem>();
+            string name = chunk.transform.GetChild(i).name;
+            if (gi != null)
+            {
+                if(!gi.TryGenerate()) print($"Destroyed {name}");
+            }
+        }
     }
 
     private void OnGenerationEnd()
